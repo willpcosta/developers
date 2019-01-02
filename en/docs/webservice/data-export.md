@@ -1,5 +1,5 @@
 ﻿Title: Data Export
-Description:  Webservices in CITSmart for Data Export
+Description:  Webservices in CITSmart
 
 #Webservice - Data Export
 Through this functionality it is possible, via request to the WebService, to obtain data from the CITSmart Database tables for an XML file.  
