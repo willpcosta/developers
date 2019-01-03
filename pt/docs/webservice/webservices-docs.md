@@ -13,7 +13,7 @@ Esta seção destina-se a descrever a estrutura de comunicação REST, estabelec
 
 ### Login
  
-!!! example "User Authentication Service"
+!!! example "Serviço de autentificação do usuário"
 	```tab="Method"
  	GET
 	```
@@ -42,23 +42,23 @@ Esta seção destina-se a descrever a estrutura de comunicação REST, estabelec
 	```
 
 	```tab="Fields"
-	Request:
-	   username: alphanumeric not empty and not null;
-	   password :alphanumeric not empty and not null;
-	Response:
-	   id: numeric not empty and not null;
-	   dateEdition: timestamp not empty and not null;
-	   dateCreation: timestamp not empty and not null;
-	   username: alphanumeric not empty and not null;
-	   token: alphanumeric not empty and not null;
-	   name: alphanumeric not empty and not null;
-	   version: numeric not empty and not null;
+	Solicitação:
+	   username: alfanumérico não vazio nem nulo;
+	   password: alfanumérico não vazio nem nulo;
+	Resposta:
+	   id: numérico não vazio nem nulo;
+	   dateEdition: timestamp não vazio nem nulo;
+	   dateCreation: timestamp não vazio nem nulo;
+	   username: alfanumérico não vazio nem nulo;
+	   token: alfanumérico não vazio nem nulo;
+	   name: alfanumérico não vazio nem nulo;
+	   version: numérico não vazio nem nulo;
 	```
             
 
 ###LIST DEPARTMENT
 
-!!! example "Service list of departments to be used."
+!!! example "Lista de serviços dos departamentos a serem usados."
 	```tab="Method"
  	GET
 	```
@@ -88,14 +88,14 @@ Esta seção destina-se a descrever a estrutura de comunicação REST, estabelec
 	```
 
 	```tab="Fields"
-	Request:
-	   name: alphanumeric not empty and not null
-	   token: alphanumeric not empty and not null
-	Response:
-	   units: List empty and not null;
-	   id: numeric not empty and not null
-	   name: alphanumeric not empty and not null
-	   code: alphanumeric not empty and not null
+	Solicitação:
+	   name: alfanumérico não vazio nem nulo
+	   token: alfanumérico não vazio nem nulo
+	Resposta:
+	   units: Lista vazia e não nula;
+	   id: numérico não vazio nem nulo
+	   name: alfanumérico não vazio nem nulo
+	   code: alfanumérico não vazio nem nulo
 	```
     
 ###LIST PROCESS TYPE
