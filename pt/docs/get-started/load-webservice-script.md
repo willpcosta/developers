@@ -1,33 +1,28 @@
-Title: Load Operations
+Title: Carregar operações
 Description: CITSmart - ESP Load Webservices Operations
 
-Load Webservice Operations
-======================
+#Carregar operações
 
-!!! Abstract "Description"
 
-    The objective is to load the scripts of Webservice operations in the language you have selected.
+!!! Abstract "Descrição"
 
-Procedure
--------------
+    O objetivo é carregar os scripts de operações Webservice no idioma que foi selecionado.
 
-1.  Access the functionality through the main menu System \> Database \> Scripts
-    \> Upload Webservices Script;
+##Procedimento
 
-2.  Select the language you want;
 
-3.  Click on "Load".
+1.	Acesse a funcionalidade através do menu principal Sistema > Banco de Dados > Scripts > Carga de Scripts Webservice;  
+2.	Seleciona o idioma que deseja;  
+3.	Clique em “Carregar”.  
 
-What to do next
--------------------
 
-After load the webservice script, verify the language load through the
-webservice operation.
+## que fazer depois
 
-Related
--------
+Depois de carregar o script do webservice, verifique a carga do idioma por meio da operação webservice.
 
-Register Webservice operation
+##Relacionado
+
+Registrar operação webservice
 
 
 <hr>
