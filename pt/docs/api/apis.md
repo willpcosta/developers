@@ -222,12 +222,12 @@ Esta seção destina-se a descrever a estrutura de comunicação REST, estabelec
 		error: valor alfanumérico que pode ser nulo mas não pode ser vazio;
 		status: não vazio nem nulo;
 		id: numérico não vazio nem nulo;
-		description: alphanumeric não vazio nem nulo;
+		description: alfanumérico não vazio nem nulo;
 	```
 
 ### ListUnits
 
-!!! example " List the units of a contract"
+!!! example " Lista as unidades de um contrato"
 	```tab="Method"
  	POST
 	```
@@ -262,20 +262,20 @@ Esta seção destina-se a descrever a estrutura de comunicação REST, estabelec
 	```
 
 	```tab="Fields"
-	Request :
-		sessionID: alphanumeric not null and not empty; 
-		contractID: numeric not null
-	Response :
-		dateTime: timestamp not empty and not null;
-		operationID: numeric not empty and not null;
-		error: alphanumeric value that can be null but not empty;
-		units: not empty and not null;
-		id: numeric not empty and not null;
-		description: alphanumeric not empty and not null;	
+	Solicitação:
+		sessionID: alfanumérico não vazio nem nulo; 
+		contractID: numérico não nulo.
+	Resposta:
+		dateTime: timestamp não vazio nem nulo;
+		operationID: numérico não vazio nem nulo;
+		error: valor alfanumérico que pode ser nulo mas não pode ser vazio;
+		units: não vazio nem nulo;
+		id: numérico não vazio nem nulo;
+		description: alfanumérico não vazio nem nulo;   	
 	```
 ### SendCoordinates
 
-!!! example " Update the geographical coordinates of a unit."
+!!! example "Atualiza as coordenadas geográficas de uma unidade."
 	```tab="Method"
  	POST
 	```
@@ -303,20 +303,20 @@ Esta seção destina-se a descrever a estrutura de comunicação REST, estabelec
 	```
 
 	```tab="Fields"
-	Request :
-		unitID: numeric not null;
-		sessionID: alphanumeric not empty and not null;
-		latitude: numeric not null;
-		longitude: numeric not null;
+	Solicitação:
+		unitID: numérico não nulo;
+		sessionID: alfanumérico não vazio nem nulo;
+		latitude: numérico não nulo;
+		longitude: numérico não nulo;
 	Response :
-		dateTime: timestamp not empty and not null;
-		operationID: numeric not empty and not null;
-		error: alphanumeric value that can be null but not empty;
+		dateTime: timestamp não vazio nem nulo;
+		operationID: numérico não vazio nem nulo;
+		error: valor alfanumérico que pode ser nulo mas não pode ser vazio;
 		success: boolean;
 	```
 ### DeviceDisassociate
 
-!!! example "Disassociate a user from a device, so that when a user deletes a connection, the user no longer receives push notification from the deleted connection."
+!!! example "Desassociar um usuário de um dispositivo para que, quando um usuário excluir uma conexão, o usuário não receba mais a notificação push da conexão excluída."
 	```tab="Method"
  	POST
 	```
