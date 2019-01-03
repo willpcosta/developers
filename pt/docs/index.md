@@ -5,11 +5,11 @@ Nós fornecemos uma solução completa para melhorar a produtividade dos negóci
 A plataforma permite que você execute as migrações ou integrações necessárias entre os sistemas para aumentar ainda mais sua experiência, transformação digital e garantia de resultados positivos.  
 
 A documentação é dividida da seguinte maneira:  
-•	Visão geral
-•	Configuração de acesso
-•	Carga de operações
-•	Registro de operações
-•	APIs ESP
+•	Visão geral  
+•	Configuração de acesso  
+•	Carga de operações  
+•	Registro de operações  
+•	APIs ESP  
 •	Webservice (Exportar Dados, Docs, ESP e Neuro)  
 
 Siga o menu ao lado para acessar a documentação.
