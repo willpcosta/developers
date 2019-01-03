@@ -1,14 +1,14 @@
-﻿Title: Data Export
-Description:  Webservices in CITSmart for Data Export
+﻿Title: Exportação de Dados
+Description:  Webservices no CITSmart para Exportação de Dados
 
-#Webservice - Data Export
-Through this functionality it is possible, via request to the WebService, to obtain data from the CITSmart Database tables for an XML file.  
-The query conditions for the records that will be returned are passed as parameters via URL as the example below:  
+#Webservice – Exportação de Dados
+Por meio dessa funcionalidade, é possível, por solicitação ao WebService, obter dados das tabelas do Banco de Dados do CITSmart para um arquivo XML.
+As condições de consulta para os registros que serão retornados são passadas como parâmetros via URL, conforme o exemplo abaixo:
 
-!!! expample ""
+!!! example ""
     http://localhost/citsmart/services/data/cargos/19  
 
-This request returns the records of the positions table where the idcargo, that is, the primary key of the charges table, is equal to 19. The query generated with this request is this:  
+Essa solicitação retorna os registros da tabela de posições em que o idcargo, ou seja, a chave primária da tabela de cobranças, é igual a 19. A consulta gerada com essa solicitação é esta:  
 
 <font size=2>
 ``` mysql
@@ -16,11 +16,11 @@ This request returns the records of the positions table where the idcargo, that 
 ```
 </font>
 
-Below are listed the possibilities and parameters that can be used for data recovery using this feature:  
+Abaixo estão listadas as possibilidades e parâmetros que podem ser usados para recuperação de dados usando esta funcionalidade:  
 
-##PK Consultation
+##Consulta PK
 
-!!! example "It is possible to obtain a record according to a Primary Key field of the reported table."
+!!! example "É possível obter um registro de acordo com o campo Chave Primária da tabela relatada."
 	```HTML tab="URL"
  	http://<SERVER ADDRESS>/citsmart/services/data/<TABLE>/<PK VALUE>
 	```
@@ -34,9 +34,9 @@ Below are listed the possibilities and parameters that can be used for data reco
 	   It will search the table PROCESS with the PK Key equal to 19.
 	```
 
-##Query by Pk and Where
+##Consulta por PK e Where
 
-!!! example "It is possible to obtain a record according to a Primary Key field of the given table and that meets the conditions of a where clause."
+!!! example "É possível obter um registro de acordo com um campo de Chave Primária da tabela fornecida e que atenda às condições de uma cláusula where."
 	```HTML tab="URL"
  	http://<SERVER ADDRESS*>/citsmart/services/data/<TABLE>/<PK_VALUE>?cond=<ADDITIONAL_CLAUSES>
 	```
@@ -49,9 +49,9 @@ Below are listed the possibilities and parameters that can be used for data reco
         http://localhost/citsmart/services/data/cargos/22?cond=nomecargo like "Diretor"
 	```
 
-##Where And Ordered Consultation
+##Where e Consulta Ordenada
 
-!!! example "It is possible to obtain ordered records of a table according to the conditions of a where clause and field for sorted ordering."
+!!! example "É possível obter registros ordenados de uma tabela de acordo com as condições de uma cláusula where e campo para ordenação."
 	```HTML tab="URL"
  	http://<SERVER ADDRESS*>/citsmart/services/data/<TABLE>?cond=<WHERE_CRITERIA>&order=<ORDERING FIELD>
 	```
@@ -66,9 +66,9 @@ Below are listed the possibilities and parameters that can be used for data reco
 
 
 
-##Query with links to Where and Ordering
+##Consulta com vínculos ao Where e Ordenação
 
-!!! example "It is possible to obtain ordered records of a table, along with the records with which they are linked, according to the conditions of a where clause and field for ordering."
+!!! example "É possível obter registros ordenados de uma tabela, juntamente com os registros com os quais eles estão vinculados, de acordo com as condições de uma cláusula where e de um campo para ordenação."
 
 	```HTML tab="URL"
 	http://<SERVER ADDRESS*>/citsmart/services/data/<TABLE>?cond=<WHERE_CRITERIA>&order=<ORDERING FIELD>&links=<s_ou_n>
@@ -83,14 +83,14 @@ Below are listed the possibilities and parameters that can be used for data reco
 	```
 
 	```tab="Fields"
-	cond =Refers to the conditions of the where clause;
-	order = Field that will be used in the order by clause;
-	links = "S", or "N". When S, the query will also export foreign key bindings. That is, the records of other tables that reference this record. By default, when this option is not entered, the value is N.
+	cond = Refere-se às condições da cláusula where;
+	order = Campo que será usado na ordem por cláusula;
+	links = "S" ou "N". Quando S, a consulta também exportará ligações de chaves estrangeiras. Ou seja, os registros de outras tabelas que fazem referência a esse registro. Por padrão, quando essa opção não é inserida, o valor é N.
 	```
 
 <hr>
 <font  Size=2><b>Produto/Versão:</b> CITSmart ESP | 8.00</font> &nbsp; &nbsp;
-<font  Size=2><b>Atualização:</b>13/12/2018 - Andre Luiz de Oliveira Fernandes</font>
+<font  Size=2><b>Atualização:</b>03/01/2019 - João Pelles Junior</font>
 	
 
 
