@@ -5,7 +5,7 @@ Description: descrever a estrutura de comunicação REST, estabelecida entre apl
 
 Esta seção destina-se a descrever a estrutura de comunicação REST, estabelecida entre aplicativos e o servidor de back-end.
 
-!!! Atenção 
+!!! warning "Atenção"
     "**CITSMART_URL**": URL unalterable prefix, so that you can access the services made available to the mobile applications.</br>
     _ALL API THAT REQUIRES A “**sessionID**” WILL NEED TO BE IN A SESSION PROVIDED BY THE “Login” API._
 
