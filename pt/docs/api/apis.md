@@ -769,7 +769,7 @@ Esta seção destina-se a descrever a estrutura de comunicação REST, estabelec
 
 ### GetById
 
-!!! example "Retrieves details of a request, according to its identifier"
+!!! example "Recupera detalhes de uma solicitação, de acordo com seu identificador"
 	```tab="Method"
  	POST
 	```
@@ -803,26 +803,26 @@ Esta seção destina-se a descrever a estrutura de comunicação REST, estabelec
 	```
 
 	```tab="Fields"
-	Request :
-		taskId: numeric not null;
-		sessionID: alphanumeric not null and not empty;
-	Response :
-		dateTime: timestamp not empty and not null;
-		operationID: numeric not empty and not null;
-		error: alphanumeric value that can be null but not empty;
-		notification; not empty and not null;
-		endSLA: date in alphanumeric by the patterns dd/MM/yyyy HH:mm or MM/dd/yyyy HH:mm, depending on the locale.
-		task: alphanumeric not empty and not null;
-		service: alphanumeric not empty and not null;
-		description: alphanumeric not empty and not null;
-		status: alphanumeric not empty and not null;
-		taskStatus: alphanumeric not empty and not null;
-		timeSLA: numeric integer not null, in minutes;
+	Solicitação:
+		taskId: numérico não nulo;
+		sessionID: alfanumérico não vazio nem nulo;
+	Resposta:
+		dateTime: timestamp não vazio nem nulo;
+		operationID: numérico não vazio nem nulo;
+		error: valor alfanumérico que pode ser nulo mas não pode ser vazio;
+		notification; não vazio nem nulo;
+		endSLA: data em alfanumérico pelos padrões dd/MM/aaaa HH:mm ou MM/dd/aaaa HH:mm, dependendo do locale.
+		task: alfanumérico não vazio nem nulo;
+		service: alfanumérico não vazio nem nulo;
+		description: alfanumérico não vazio nem nulo;
+		status: alfanumérico não vazio nem nulo;
+		taskStatus: alfanumérico não vazio nem nulo;
+		timeSLA: numérico inteiro não nulo, em minutos;
 	```
 
 ### GetReasons
 
-!!! example "Recover motives to be used in the approval of a request, according to the request."
+!!! example "Recuperar os motivos a serem utilizados na aprovação de uma solicitação, de acordo com a solicitação."
 	```tab="Method"
  	POST
 	```
@@ -866,22 +866,22 @@ Esta seção destina-se a descrever a estrutura de comunicação REST, estabelec
 	```
 
 	```tab="Fields"
-	Request :
-		taskId: numeric not null;
-		sessionID: alphanumeric not null and not empty;
-	Response :
-		dateTime: timestamp not empty and not null;
-		operationID: numeric not empty and not null;
-		error: alphanumeric value that can be null but not empty;
-		amount: numeric not empty and not null;
-		reasons; not empty and not null;
-		id: numeric not empty and not null;
-		desc: alphanumeric not empty and not null;
+	Solicitação:
+		taskId: numérico não nulo;
+		sessionID: alfanumérico não vazio nem nulo;
+	Resposta:
+		dateTime: timestamp não vazio nem nulo;
+		operationID: numérico não vazio nem nulo;
+		error: valor alfanumérico que pode ser nulo mas não pode ser vazio;
+		amount: numérico não vazio nem nulo;
+		reasons; não vazio nem nulo;
+		id: numérico não vazio nem nulo;
+		desc: alfanumérico não vazio nem nulo;
 	```
 
 ### AttendRequest
 
-!!! example " Inform the beginning of attendance of a service request "
+!!! example "Informar o início do atendimento de uma solicitação de serviço."
 	```tab="Method"
  	POST
 	```
@@ -910,22 +910,22 @@ Esta seção destina-se a descrever a estrutura de comunicação REST, estabelec
 	```
 
 	```tab="Fields"
-	Request :
-		number: numeric not null;
-		latitude: numeric not null;
-		longitude: numeric not null;
-		dateTime: timestamp not empty and not null;
-		sessionID: alphanumeric not null and not empty;
-	Response :
-		dateTime: timestamp not empty and not nul;
-		operationID: numeric not empty and not null;
-		error: alphanumeric value that can be null but not empty;
-		success: boolean that identifies the successful completion of the operation;
+	Solicitação:
+		number: numérico não nulo;
+		latitude: numérico não nulo;
+		longitude: numérico não nulo;
+		dateTime: timestamp não vazio nem nulo;
+		sessionID: alfanumérico não vazio nem nulo;
+	Resposta:
+		dateTime: timestamp não vazio nem nulo;
+		operationID: numérico não vazio nem nulo;
+		error: valor alfanumérico que pode ser nulo mas não pode ser vazio;
+		success: Boolean que identifica a conclusão bem sucedida da operação;  
 	```
 
 ### AttendantLocation
 
-!!! example "Reports the automatic location of the attendant position."
+!!! example "Informa a localização automática da posição do atendente."
 	```tab="Method"
  	POST
 	```
@@ -958,7 +958,7 @@ Esta seção destina-se a descrever a estrutura de comunicação REST, estabelec
 
 ### Feedback 
 
-!!! example "Register an approval or denial of a service request."
+!!! example "Registra uma aprovação ou negação de uma solicitação de serviço."
 	```tab="Method"
  	POST
 	```
@@ -985,22 +985,22 @@ Esta seção destina-se a descrever a estrutura de comunicação REST, estabelec
 	```
 
 	```tab="Fields"
-	Request :
-		taskId: numeric not null;
-		feedback: numeric not null:
-			0 - request rejection;
-			1 - request approval;
-		reasonId: numeric not null;
-		comments: alphanumeric not null and not empty;
-		sessionID: alphanumeric not null and not empty;
-	Response :
-		dateTime: timestamp not empty and not null;
-		operationID: numeric not empty and not null;
-		error: alphanumeric value that can be null but not empty;
+	Solicitação:
+		taskId: numérico não nulo;
+		feedback: numérico não nulo;
+			0 - rejeição da solicitação;
+			1 - aprovação da solicitação;
+		reasonId: numérico não nulo;
+		comments: alfanumérico não vazio nem nulo;
+		sessionID: alfanumérico não vazio nem nulo;
+	Resposta:
+		dateTime: timestamp não vazio nem nulo;
+		operationID: numérico não vazio nem nulo;
+		error: valor alfanumérico que pode ser nulo mas não pode ser vazio;
 	```
 ### New
 
-!!! example " Create a new request."
+!!! example "Cria uma nova solicitação"
 	```tab="Method"
  	POST
 	```
