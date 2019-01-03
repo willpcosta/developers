@@ -42,15 +42,15 @@ Esta seção destina-se a descrever a estrutura de comunicação REST, estabelec
 	```
 
 	```tab="Fields"
-	Request:
-		userName: alphanumeric not empty and not null;
-		password: alphanumeric not empty and not null;
-		token: alphanumeric not empty and not null, referring to the device identifier for sending the push notification;
-		platform: referring to the platform type (ios or android) from which the user will log in;
-	Response:
-		sessionID: cannot be null or empty.
-		rangeAction: is integer, not null and can be zero. It represents the action radius of a field user in KM.
-		locationInterval: is integer, not null, and greater than zero. Represents, in minutes, the time interval that the App must send the positioning of the attendant.
+	Solicitação:
+		userName: alfanumérico não vazio e nem nulo;
+		password: alfanumérico não vazio e nem nulo;
+		token: alfanumérico não vazio e nem nulo, refere-se ao identificador do dispositivo para enviar a notificação push;
+		platform: refere-se ao tipo de plataforma (ios ou android) do qual o usuário efetuará login;
+	Resposta:
+		sessionID: não pode ser nulo nem vazio.
+		rangeAction: é inteiro, não nulo e não pode ser zero. Representa o raio de ação de um usuário de campo em KM.
+		locationInterval: é inteiro, não nulo e maior que zero. Representa, em minutos, o intervalo de tempo que o aplicativo deve enviar o posicionamento do atendente.
 	```
                 
 
@@ -59,7 +59,7 @@ Esta seção destina-se a descrever a estrutura de comunicação REST, estabelec
 
 ### ListContracts
 
-!!! example "List the contracts accessible to the attendant."
+!!! example "Lista dos contratos acessíveis ao atendente."
 	```tab="Method"
  	POST
 	```
