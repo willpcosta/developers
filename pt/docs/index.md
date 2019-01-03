@@ -1,16 +1,16 @@
 # Overview
 
-We deliver a complete solution to improve business productivity, ensure business process and security compliance, intelligently store content and retrieve information quickly.
+Nós fornecemos uma solução completa para melhorar a produtividade dos negócios, garantir a conformidade dos processos comerciais e de segurança, armazenar conteúdo de maneira inteligente e recuperar informações rapidamente.  
 
-The platform allows you to perform the necessary migrations or integrations between systems to further increase your experience, digital transformation and the guarantee of positive results.
+A plataforma permite que você execute as migrações ou integrações necessárias entre os sistemas para aumentar ainda mais sua experiência, transformação digital e garantia de resultados positivos.  
 
-The documentation is divided as follows:
+A documentação é dividida da seguinte maneira:  
+•	Visão geral
+•	Configuração de acesso
+•	Carga de operações
+•	Registro de operações
+•	APIs ESP
+•	Webservice (Exportar Dados, Docs, ESP e Neuro)  
 
-* Overview
-* Configuring Acess
-* Load Operations
-* Register Operation
-* APIs ESP
-* Webservice (Export Data, Docs, ESP and Neuro)
+Siga o menu ao lado para acessar a documentação.
 
-Follow the menu on the side to access the documentation.
