@@ -1027,21 +1027,21 @@ Esta seção destina-se a descrever a estrutura de comunicação REST, estabelec
 	```
 
 	```tab="Fields"
-	Request :
-		description: alphanumeric not null and not empty;
-		sessionID: alphanumeric not null and not empty;
-		latitude: numeric not null;
-		longitude: numeric not null;
-	Response :
-		dateTime: timestamp not empty and not null;
-		operationID: numeric not empty and not null;
-		error: alphanumeric value that can be null but not empty;
-		number: alphanumeric not empty and not null;
+	Solicitação:
+		description: alfanumérico não vazio nem nulo;
+		sessionID: alfanumérico não vazio nem nulo;
+		latitude: numérico não nulo;
+		longitude: numérico não nulo;
+	Resposta:
+		dateTime: timestamp não vazio nem nulo;
+		operationID: numérico não vazio nem nulo;
+		error: valor alfanumérico que pode ser nulo mas não pode ser vazio;
+		number: alfanumérico não vazio nem nulo;
 	```
 
 ### Check-In
 
-!!! example "Check-in of the attendant in a request. In other words, it initiates the fulfillment of the request."
+!!! example "Check-in do atendente em uma solicitação. Em outras palavras, inicia o cumprimento da solicitação."
 	```tab="Method"
  	POST
 	```
@@ -1069,22 +1069,22 @@ Esta seção destina-se a descrever a estrutura de comunicação REST, estabelec
 	```
 
 	```tab="Fields"
-	Request :
-		taskId: numeric not null;
-		sessionID: alphanumeric not null and not empty;
-		latitude: numeric not null;
-		longitude: numeric not null;
-		startTime: timestamp not empty and not null of the time that the attendant requests "Check-in"
-	Response :
-		dateTime: timestamp not empty and not null;
-		operationID: numeric not empty and not null;
-		error: alphanumeric value that can be null but not empty;
-		number: alphanumeric not empty and not null;
+	Solicitação:
+		taskId:numérico não nulo;
+		sessionID: alfanumérico não vazio nem nulo;
+		latitude: numérico não nulo;
+		longitude: numérico não nulo;
+		startTime: timestamp não vazio nem nulo do tempo que o atendente solicita o "Check-in"
+	Resposta:
+		dateTime: timestamp não vazio nem nulo;
+		operationID: numérico não vazio nem nulo;
+		error: valor alfanumérico que pode ser nulo mas não pode ser vazio;
+		number: alfanumérico não vazio nem nulo;
 	```
 
 ### Check-Out
 
-!!! example "Checks out an attendant in a request, updating their status ("Suspended", "Solved", etc.)."
+!!! example "Verifica um atendente em uma solicitação, atualizando seu status ("Suspenso", "Resolvido", etc.)."
 	```tab="Method"
  	POST
 	```
@@ -1115,24 +1115,24 @@ Esta seção destina-se a descrever a estrutura de comunicação REST, estabelec
 	```
 
 	```tab="Fields"
-	Request :
-		taskId: numeric not null;
-		sessionID: alphanumeric not null and not empty;
-		latitude: numeric not null;
-		longitude: numeric not null;
-		status: numeric not null, according to return of service "ListNotivicationStatus"
-		solution: numeric, informed only when a status of "Solved (4)" or "Suspended (2)"
-		descSolution: alphanumeric, non-null and non-empty, reported only when status equal to "Solved (4)" or "Suspended (2)"
-	Response :
-		dateTime: timestamp not empty and not null;
-		operationID: numeric not empty and not null;
-		error: alphanumeric value that can be null but not empty;
-		number: alphanumeric not empty and not null;
+	Solicitação:
+		taskId: numérico não nulo;
+		sessionID: alfanumérico não vazio nem nulo;
+		latitude: numérico não nulo;
+		longitude: numérico não nulo;
+		status: numérico não nulo, de acordo com o retorno do serviço "ListNotivicationStatus"
+		solution: numérico, informado apenas quando o status for “Solucionado (4)” or “Suspenso (2)”
+		descSolution: alfanumérico, não vazio nem nulo, informado apenas quando o status for “Solucionado (4)” or “Suspenso (2)”
+	Resposta:
+		dateTime: timestamp não vazio nem nulo;
+		operationID: numérico não vazio nem nulo;
+		error: valor alfanumérico que pode ser nulo mas não pode ser vazio;
+		number: alfanumérico não vazio nem nulo;
 	```
 
 ### Check-InDenied
 
-!!! example "Register the denial of a  request attendance by the attendant, in cases of refusal to the check-in. "
+!!! example "Registrar a negação de uma solicitação de atendimento pelo atendente, nos casos de recusa ao check-in."
 	```tab="Method"
  	POST
 	```
@@ -1161,16 +1161,16 @@ Esta seção destina-se a descrever a estrutura de comunicação REST, estabelec
 	```
 
 	```tab="Fields"
-	Request :
-		taskId: numeric not null;
-		sessionID: alphanumeric not empty and not null;
-		latitude: numeric not null;
-		longitude: numeric not null;
-		reasonId: numeric and not null. Obtained by calling the "GetDeniedReasons" service;
-	Response :
-		dateTime: timestamp not empty and not null;
-		operationID: numeric not empty and not null;
-		error: alphanumeric value that can be null but not empty;
-		number: alphanumeric not empty and not null;
+	Solicitação:
+		taskId: numérico não nulo;
+		sessionID: alfanumérico não vazio nem nulo;
+		latitude: numérico não nulo;
+		longitude: numérico não nulo;
+		reasonId: numérico e não nulo. Obtido através do chamado de serviço "GetDeniedReasons";
+	Resposta:
+		dateTime: timestamp não vazio nem nulo;
+		operationID: numérico não vazio nem nulo;
+		error: valor alfanumérico que pode ser nulo mas não pode ser vazio;
+		number: alfanumérico não vazio nem nulo;
 	```
 
