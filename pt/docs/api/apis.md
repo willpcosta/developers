@@ -23,7 +23,7 @@ Esta seção destina-se a descrever a estrutura de comunicação REST, estabelec
  	<CITSMART_URL>/services/v2/login
 	```
 
-	```JSON tab="Solicitação"
+	```JSON tab="Request"
 	Solicitação { 
 	"userName": "mobile", 
 	"password": "123456", 
@@ -102,7 +102,7 @@ Esta seção destina-se a descrever a estrutura de comunicação REST, estabelec
 
 ### ListDeniedReasons
 
-!!! example " List the reasons when refusing a request, like in the check-in."
+!!! example "Lista de razões quando recusar uma solicitação, como no check-in"
 	```tab="Method"
  	POST
 	```
@@ -136,15 +136,15 @@ Esta seção destina-se a descrever a estrutura de comunicação REST, estabelec
 	```
 
 	```tab="Fields"
-	Request :
-		sessionID: alphanumeric not null and not empty;
-	Response :
-		dateTime: timestamp not empty and not null;
-		operationID: numeric not empty and not null;
-		error: alphanumeric value that can be null but not empty;
-		reasons: not empty and not null;
-		id: numeric not empty and not null;
-		description: alphanumeric not empty and not null;
+	Solicitação :
+		sessionID: alfanumérico não nulo e nem vazio;
+	Resposta :
+		dateTime: timestamp não vazio nem nulo;
+		operationID: numérico não vazio nem nulo;
+		error: valor alfanumérico que pode ser nulo mas não pode ser vazio;
+		reasons: não vazio nem nulo;
+		id: numérico não vazio nem nulo;
+		description: alfanumérico não vazio nem nulo.
 	```
 
 ### ListSolicitationStatus
