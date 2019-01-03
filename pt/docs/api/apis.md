@@ -14,7 +14,7 @@ Esta seção destina-se a descrever a estrutura de comunicação REST, estabelec
 
 ### Login 
 
-!!! example "Login the user to use CITSmart Services."
+!!! example "Login do usuário para usar os Serviços CITSmart"
 	```tab="Method"
  	POST
 	```
@@ -23,8 +23,8 @@ Esta seção destina-se a descrever a estrutura de comunicação REST, estabelec
  	<CITSMART_URL>/services/v2/login
 	```
 
-	```JSON tab="Request"
-	Request { 
+	```JSON tab="Solicitação"
+	Solicitação { 
 	"userName": "mobile", 
 	"password": "123456", 
 	"token": "API132654ASFE32132121Â­5412", 
