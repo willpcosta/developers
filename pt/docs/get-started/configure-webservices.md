@@ -1,27 +1,22 @@
-﻿Title:Configuring Access 
+﻿Title:Configurando acesso 
 Description: CITSmart - ESP Configuring Access to CITSmart Webservices
 
-Configuring Access to CITSmart Webservices
+Configurando acesso no CITSmart Webservices
 ============================================================
 
-!!! Abstract "Description"
-    This functionality is intended to link the request executor groups to the Webservices of CITSmart Mobile to have access of the Mobile functionalities.
+!!! Abstract "Descrição"
+    Essa funcionalidade tem o objetivo de vincular os grupos executores da solicitação aos Webservices do CITSmart Mobile, para que tenham acesso às funcionalidades do Mobile.
 
-!!! note
-    At the time the group is selected, it will be linked to all CITSmart Mobile Webservices in an automated manner.
+!!! Atenção
+    No momento em que o grupo for selecionado, ele será vinculado a todos os Webservices do CITSmart Mobile, de maneira automatizada.
 
-Procedure
----------
-1.  Access the functionality through the main menu System \> Settings \> Mobile
-    \> CITSmart Mobile Web Services ;
+##Procedimento
 
-2.  To view/edit the Web Service information, click on the tab **List Web
-    Services**;
+1.	Acesse a funcionalidade através do menu principal Sistema > Configurações > Mobile > Webservices CITSmart Mobile;  
+2.	Para visualizar/editar as informações dos Webservices, clique na guia Listar Web Services;  
+3.	Para configurar um grupo de Web Services, clique na guia Vincular Grupos e, em seguida, no campo disponível;  
+4.	Clique em "Pesquisar" para listar todos os grupos e, depois, escolha o grupo.  
 
-3.  To configure a group of Web Services, click on the tab **Link Groups** and
-    then on the field available;
-
-4.  Click on "Search" to list all groups, then choose the group.
 
 <hr>
 <font  Size=2><b>Produto/Versão:</b> CITSmart ESP | 8.00</font> &nbsp; &nbsp;
