@@ -554,7 +554,7 @@ Esta seção destina-se a descrever a estrutura de comunicação REST, estabelec
 
 ### GetByCoordinates
 
-!!! example "Recover the most recent request for the user in the group, from the user's current coordinates."
+!!! example "Recupera a solicitação mais recente para o usuário no grupo, a partir das coordenadas atuais do usuário."
 	```tab="Method"
  	POST
 	```
@@ -615,64 +615,64 @@ Esta seção destina-se a descrever a estrutura de comunicação REST, estabelec
 
 	```tab="Fields"
 	Request :
-		notificationType: numeric not null;
-		onlyApproval: numeric not null;
-		latitude: numeric not null;
-		longitude: numeric not null;
-		sessionID: alphanumeric not null and not empty;
-		pager: pagination information:
-			page: page number to be queried, starting from 1;
-			size: number of elements to return;
-	Response :
-		dateTime: timestamp not empty and not null;
-		operationID: numeric not empty and not null;
-		error: alphanumeric value that can be null but not empty;
-		notifications: not null;
-		number: numeric not null;
-		taskId: numeric not null;
-		type: numeric not empty and not null;
-			0 - All
-			1 - Purchases
-			2 - Travels
-			3 - HR
-			4 - Incidents
-			5 - Others
-			6 - Waiting
-		date: date string in the format dd/mm/yyyy;
-		timeFlag: Number that defines the period;
-			0 - In time
-			1 - Less than an hour
-			2 - Overdue
-		timeSLA: numeric integer not null, in minutes;
-		latitude: numeric not null;
-		longitude: numeric not null;
-		endSLA: date in alphanumeric in the patterns dd/MM/ yyyy HH:mm or MM/dd/yyyy HH:mm, depending on the locale, which may have null value.
-		task: alphanumeric not empty and not null;
-		personal: boolean that identifies whether the request is signed for the user or if it's from the group;
-		inService: non-null boolean that identifies whether the request is in service;
-		inCheckin: Flag that identifies whether a request is in the checkin Personal (true or false);
-			0 – Waiting checkin
-			1 – In Cleckin
-		service: alphanumeric not empty and not null;
-		typeRequest: Flag that identifies the type of execution of a request
-			0 - Request Execution
-			1 - Request Approval
-		waiting: Flag that defines the status of the request.
-			0 - Monitoring
-			1 - Execution available
-		contract: numeric not null;
-		unit: numeric not null;
-		priorityorder: numeric value that can present null value, sequence number that identifies if the manager ordered the service;
-		paging: pagination information
-			1.	page: number of the current page
-			2.	size: size of the page returned
-			3.	totalElements: total of elements according to the query
-		totalPages: total of pages according to the query
+		notificationType: numérico não nulo;
+		onlyApproval: numérico não nulo;
+		latitude: numérico não nulo;
+		longitude: numérico não nulo;
+		sessionID: alfanumérico não vazio nem nulo;
+		pager: informação de paginação:
+			page: número de página a ser consultado, a partir de 1;
+			size: número de elementos a retornar;
+	Resposta:
+		dateTime: timestamp não vazio nem nulo;
+		operationID: numérico não vazio nem nulo;
+		error: valor alfanumérico que pode ser nulo nem vazio;
+		notifications: não nulo;
+		number: numérico não nulo;
+		taskId: numérico não nulo;
+		type: numérico não vazio nem nulo;
+			0 - Tudo
+			1 - Compras
+			2 - Viagens
+			3 - RH
+			4 - Incidentes
+			5 - Outros
+			6 - Esperando
+		date: data no formato dd/mm/aaaa;
+		timeFlag: Número que define o período;
+			0 - Em tempo
+			1 - Menos de uma hora
+			2 - Atrasado
+		timeSLA: inteiro numérico não nulo, em minutos;
+		latitude: numérico não nulo;
+		longitude: numérico não nulo;
+		endSLA: date em alfanumérico nos padrões dd/MM/aaaa HH:mm ou MM/dd/aaaa HH:mm, dependendo do locale, que pode ter valor nulo.
+		task: alfanumérico não vazio nem nulo;
+		personal: boolean que identifica se a solicitação foi destinada ao usuário ou para o grupo;
+		inService: Boolean não nulo que identifica se a solicitação está em atendimento;
+		inCheckin: Flag que identifica se a solicitação está em checkin Pessoal (true ou false);
+			0 – Esperando checkin
+			1 – Em Cleckin
+		service: alfanumérico não vazio nem nulo;
+		typeRequest: Flag que identifica o tipo de execução de uma solicitação
+			0 - Execução da Solicitação
+			1 - Aprovação da Solicitação
+		waiting: Flag que define o status da solicitação.
+			0 - Acompanhando
+			1 - Execução disponível
+		contract: numérico não nulo;
+		unit: numérico não nulo;
+		priorityorder: valor numérico que pode apresentar valor nulo, número de sequência que identifica se o gerente solicitou o serviço;
+		paging: informação de paginação
+			1.	page: número da página atual
+			2.	size: tamanho da página retornada
+			3.	totalElements: número de elementos de acordo com a consulta
+		totalPages: número de páginas de acordo com a consulta
 	```
 
 ### UpdateNotification
 
-!!! example " Retrieve the tasks of a service."
+!!! example "Recupera as tarefas de um serviço."
 	```tab="Method"
  	POST
 	```
@@ -720,51 +720,51 @@ Esta seção destina-se a descrever a estrutura de comunicação REST, estabelec
 	```
 
 	```tab="Fields"
-	Request :
-		notificationType: numeric not null;
-		onlyApproval: numeric not null;
-		sessionID: alphanumeric not null and not empty;
-		oldestNumber: numeric not null;
-	Response :
-		dateTime: timestamp not empty and not null;
-		operationID: numeric not empty and not null;
-		error: alphanumeric value that can be null but not empty;
-		notifications: not null;
-		number: numeric not null;
-		taskId: numeric not null;
-		type: numeric not empty and not null;
-			0 - All
-			1 - Purchases
-			2 - Travels
-			3 - HR
-			4 - Incidents
-			5 - Others
-			6 - Waiting
-		date: date string in format dd/mm/yyyy;
-		timeFlag: Number that defines the period;
-			0 - In time
-			1 - Less than an hour
-			2 - Overdue
-		timeSLA: numeric integer not null, in minutes;
-		latitude: numeric;
-		longitude: numeric;
-		endSLA: date in alphanumeric in the patterns dd/MM/ yyyy HH:mm or MM/dd/yyyy HH:mm, depending on the locale, which may have null value.
-		task: alphanumeric not empty and not null;
-		personal: boolean that identifies whether the request is signed for the user or if it's from the group;
-		inService: non-null boolean that identifies whether the request is in service;
-		inCheckin: Flag that identifies whether a request is in the checkin Personal (true or false);
-			0 – Waiting checkin
-			1 – In Cleckin
-		service: alphanumeric not empty and not null;
-		typeRequest: Flag that identifies the type of execution of a request
-			0 - Request Execution
-			1 - Request Approval
-		waiting: Flag that defines the status of the request.
-			0 - Monitoring
-			1 - Execution available
-		contract: numeric not null;
-		unit: numeric not null;
-		priorityorder: numeric value that can present null value, sequence number that identifies if the manager ordered the service;	
+	Solicitação:
+		notificationType: numérico não nulo;
+		onlyApproval: numérico não nulo;
+		sessionID: alfanumérico não vazio nem nulo;
+		oldestNumber: numérico não nulo;
+	Resposta:
+		dateTime: timestamp não vazio nem nulo;
+		operationID: numérico não vazio nem nulo;
+		error: valor alfanumérico que pode ser nulo nem vazio;
+		notifications: não nulo;
+		number: numérico não nulo;
+		taskId: numérico não nulo;
+		type: numérico não vazio nem nulo;
+			0 - Tudo
+			1 - Compras
+			2 - Viagens
+			3 - RH
+			4 - Incidentes
+			5 - Outros
+			6 - Esperando
+		date: data no formato dd/mm/aaaa;
+		timeFlag: Número que define o período;
+			0 - Em tempo
+			1 - Menos de uma hora
+			2 - Atrasado
+		timeSLA: inteiro numérico não nulo, em minutos;
+		latitude: numérico não nulo;
+		longitude: numérico não nulo;
+		endSLA: date em alfanumérico nos padrões dd/MM/aaaa HH:mm ou MM/dd/aaaa HH:mm, dependendo do locale, que pode ter valor nulo.
+		task: alfanumérico não vazio nem nulo;
+		personal: Boolean que identifica se a solicitação foi destinada ao usuário ou para o grupo;
+		inService: Boolean não nulo que identifica se a solicitação está em atendimento;
+		inCheckin: Flag que identifica se a solicitação está em checkin Pessoal (true ou false);
+			0 – Esperando checkin
+			1 – Em Cleckin
+		service: alfanumérico não vazio nem nulo;
+		typeRequest: Flag que identifica o tipo de execução de uma solicitação
+			0 - Execução de Solicitação
+			1 - Aprovação de Solicitação
+		waiting: Flag que define o status da solicitação.
+			0 - Acompanhando
+			1 - Execução disponível
+		contract: numérico não nulo;
+		unit: numérico não nulo;
+		priorityorder: valor numérico que pode apresentar valor nulo, número de sequência que identifica se o gerente solicitou o serviço;	
 	```
 
 ### GetById
