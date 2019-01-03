@@ -343,20 +343,20 @@ Esta seção destina-se a descrever a estrutura de comunicação REST, estabelec
 	```
 
 	```tab="Fields"
-	Request :
-		connection: alphanumeric not empty and not null, referring to the connection deleted by the user;
-		sessionID: alphanumeric not empty and not null;
-		token: alphanumeric not empty and not null, referring to the token to be disassociated;
+	Solicitação:
+		connection: alfanumérico não vazio nem nulo, referindo-se à conexão excluída pelo usuário;
+		sessionID: alfanumérico não vazio nem nulo;
+		token: alfanumérico não vazio nem nulo, referindo-se ao token a ser desassociado;
 	Response :
-		dateTime: timestamp not empty and not null;
-		operationID: numeric not empty and not null;
-		error: alphanumeric value that can be null but not empty;
+		dateTime: timestamp não vazio nem nulo;
+		operationID: numérico não vazio nem nulo;
+		error: valor alfanumérico que pode ser nulo mas não vazio;
 		success: boolean;
 	```
 
 ### GetNewest
 
-!!! example " Recover the most recent request for the user in the group, from the latest (newestNumber) in the App "
+!!! example "Recupera a solicitação mais recente para o usuário no grupo, a partir da última (newestNumber) no aplicativo"
 	```tab="Method"
  	POST
 	```
