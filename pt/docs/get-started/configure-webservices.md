@@ -7,7 +7,7 @@ Configurando acesso no CITSmart Webservices
 !!! Abstract "Descrição"
     Essa funcionalidade tem o objetivo de vincular os grupos executores da solicitação aos Webservices do CITSmart Mobile, para que tenham acesso às funcionalidades do Mobile.
 
-!!! Note
+!!! Nota
     No momento em que o grupo for selecionado, ele será vinculado a todos os Webservices do CITSmart Mobile, de maneira automatizada.
 
 ##Procedimento
