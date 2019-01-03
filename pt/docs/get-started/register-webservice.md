@@ -1,36 +1,28 @@
-﻿Title: Register Operation
+﻿Title: Registrar operações
 Description: CITSmart - ESP Register Webservices Operations
 
-Register Webservice operation
-=============================
+#Registrar operação webservice
 
-!!! Abstract "Description"
 
-    This feature provides various actions, such as including, changing and deleting the webservice operation.
+!!! Abstract "Descrição"
 
-Before getting started
---------------------------
-To enter the service web default operations in the system, it's necessary to
-previously execute the web service scripts load.
+    Essa funcionalidade fornece várias ações, como: incluir, mudar e excluir a operação webservice.
 
-Procedure
--------------
-1.  Access the functionality through the main menu System \> Webservice \>
-    Webservice Operation;
+##Antes de começar
 
-2.  Complete the fields available;
+Para inserir as operações padrões de webservice no sistema, é necessário executar previamente o carregamento dos scripts de webservice.
 
-3.  To add a parameter, click on "Add Parameter";
+##Procedimento
 
-4.  To register a new parameter, click on "Register new parameter";
-
-5.  To link groups, click on "Add Group";
-
-6.  Click on "Save".
-
+1.	Acesse a funcionalidade através do menu principal Sistema > Web Service > Operação de Web Service;  
+2.	Preencha os campos disponíveis;  
+3.	Para adicionar um parâmetro, clique em “Adicionar Parâmetro”  
+4.	Para registrar um novo parâmetro, clique em “Cadastrar Novo Parâmetro”;  
+5.	Para vincular grupos, clique em “Adicionar Grupo”;  
+6.	Clique em “Gravar”.  
 
 <hr>
 <font  Size=2><b>Produto/Versão:</b> CITSmart ESP | 8.00</font> &nbsp; &nbsp;
-<font  Size=2><b>Atualização:</b>12/12/2018 - Andre Luiz de Oliveira Fernandes</font>
+<font  Size=2><b>Atualização:</b>03/01/2010 - João Pelles Junior</font>
 	
 
