@@ -3,11 +3,11 @@ Description: CITSmart - Docs Webservices
 
 #Webservices CITSmart Docs
 
-This section is intended to describe the communication structure REST, established between applications and the back-end server.
+Esta seção destina-se a descrever a estrutura de comunicação REST, estabelecida entre aplicativos e o servidor back-end.
 
-!!! warning 
-    "**CITSMART_URL**": URL unalterable prefix, so that you can access the services made available to the mobile applications.</br>
-    _ALL API THAT REQUIRES A “**sessionID**” WILL NEED TO BE IN A SESSION PROVIDED BY THE “Login” API._
+!!! warning "Atenção" 
+    "CITSMART_URL": prefixo de URL inalterável, para que você possa acessar os serviços disponibilizados para os aplicativos de mobile</br>
+    TODO API QUE NECESSITA DE “sessionID” PRECISARÁ ESTAR NA SEÇÃO FORNECIDA PELO “Login” DA API.
 
 --------
 
