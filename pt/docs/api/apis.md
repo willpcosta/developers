@@ -406,28 +406,28 @@ Esta seção destina-se a descrever a estrutura de comunicação REST, estabelec
 	```
 
 	```tab="Fields"
-	Request :
-		notificationType: numeric not null;
-		onlyApproval: numeric not null;
-		sessionID: alphanumeric not null and not empty;
-		newestNumber: numeric not null;
+	Solicitação:
+		notificationType: numérico não nulo;
+		onlyApproval: numérico não nulo;
+		sessionID: alfanumérico não vazio nem nulo;
+		newestNumber: numérico não nulo;
 	Response :
-		dateTime: timestamp not empty and not null;
-		operationID: numeric not empty and not null;
-		error: alphanumeric value that can be null but not empty;
-		notifications: not null;
-		number: numeric not null;
-		taskId: numeric not null;
-		type: numeric not empty and not null;
-			0 - All
-			1 - Purchases
-			2 - Travels
-			3 - HR
-			4 - Incidents
-			5 - Others
-			6 - Waiting
-			date: date string in dd/mm/yyyy format;
-		timeFlag: Number that defines the period;
+		dateTime: timestamp não vazio nem nulo;
+		operationID: numérico não vazio nem nulo;
+		error: valor alfanumérico que pode ser nulo mas não pode ser vazio;
+		notifications: não nulo;
+		number: numérico não nulo;
+		taskId: numérico não nulo;
+		type: numérico não vazio nem nulo;
+			0 - Tudo
+			1 - Compras
+			2 - Viagens
+			3 - RH
+			4 - Incidentes
+			5 - Outros
+			6 - Esperando
+			data: string de data no formato dd/mm/yyyy;
+		timeFlag: Número que define o período;
 			0 - In time
 			1 - Less than an hour
 			2 - Overdue
