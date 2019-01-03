@@ -149,7 +149,7 @@ Esta seção destina-se a descrever a estrutura de comunicação REST, estabelec
 
 ### ListSolicitationStatus
 
-!!! example " List status of a request to be used, for example, in the checkout service."
+!!! example "Lista os status de uma solicitação a ser usada, por exemplo, no serviço de checkout."
 	```tab="Method"
  	POST
 	```
@@ -214,15 +214,15 @@ Esta seção destina-se a descrever a estrutura de comunicação REST, estabelec
 	```
 
 	```tab="Fields"
-	Request :
-		sessionID: alphanumeric not null and not empty;
-	Response :
-		dateTime: timestamp not empty and not null;
-		operationID: numeric not empty and not null;
-		error: alphanumeric value that can be null but not empty;
-		status: not empty and not null;
-		id: numeric not empty and not null;
-		description: alphanumeric not empty and not null;
+	Solicitação :
+		sessionID: alfanumérico não vazio nem nulo;
+	Resposta :
+		dateTime: timestamp não vazio nem nulo;
+		operationID: numérico não vazio nem nulo;
+		error: valor alfanumérico que pode ser nulo mas não pode ser vazio;
+		status: não vazio nem nulo;
+		id: numérico não vazio nem nulo;
+		description: alphanumeric não vazio nem nulo;
 	```
 
 ### ListUnits
