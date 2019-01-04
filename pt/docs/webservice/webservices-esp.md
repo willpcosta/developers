@@ -104,31 +104,31 @@ Os Web Services foram criados no CTSmart ESP para inclusão, atualização, cons
     ```
 
     ```tab="Atributos de Entrada"
-    ​​synchronize - indicates whether the user and / or service information will be synchronized.
-    request - request information from the CtRequest class, containing:
-        numberOrigin - the request number on the source system. Required when the number attribute is not entered.
-        description - description of the incident or request (optional).
-        userID - applicant's user ID (required). It will be included if it does not exist in the CITSmart database and the synchronize attribute is equal to true.
-        number - request number in CITSmart (required).
-        contact - data of the applicant. Required when the requestor does not exist in CITSmart and the synchronize attribute is equal to true).
-            name - applicant name (required).
-            phoneNumber - applicant's phone number (required).
-            e-mail - applicant's e-mail (required)).
-    ​    service - service data (optional).
-            code - service code. Optional, if service name is given).
-            name - service Name. Required when the service does not exist in CITSmart and the synchronize attribute is true.
-            category -category of service. Required when the service does not exist in CITSmart and the synchronize attribute is true.
-                Code - category code.
-                Name - category name.
-         Urgency - urgency of the request (optional). Possible values: H = High, M = Average, L = Low. If not informed, the urgency will be calculated from the CITSmart service catalog parameters.
-         Impact of request (optional). Possible values: H = High, M = Medium, L = Low. If not informed, the impact will be calculated from the CITSmart service catalog parameters.
+    ​​synchronize - indica se as informações de usuário e/ou serviço serão sincronizadas.
+    request - informações da solicitação origem da classe CtRequest, contendo:
+        numberOrigin - número da solicitação no sistema de origem. Obrigatório quando o atributo number não for informado.
+        description - descrição do incidente ou requisição (opcional).
+        userID - identificação de usuário do solicitante (obrigatório). Será incluído se não existir na base do CITSmart e o atributo synchronize for igual a true.
+        number - número da solicitação no CITSmart (obrigatório).
+        contact - dados do solicitante. Obrigatório quando o solicitante não existir no CITSmart e o atributo synchronize for igual a true).
+            name - nome do solicitante (obrigatório).
+            phoneNumber - telefone do solicitante (obrigatório).
+            e-mail - e-mail do solicitante (obrigatório).
+    ​    service - dados do serviço (opcional).
+            code - código do serviço. Opcional, se nome do serviço for informado).
+            name - nome do serviço. Obrigatório quando o serviço não existir no CITSmart e o atributo synchronize for igual a true.
+            category - categoria do serviço. Obrigatório quando o serviço não existir no CITSmart e o atributo synchronize for igual a true.
+                Code - código da categoria.
+                Name - nome da categoria.
+         Urgency - urgência da solicitação (opcional). Valores possíveis: H=Alta, M=Média, L=Baixa. Se não for informada, a urgência será calculada partir dos parâmetros do catálogo de serviço do CITSmart ITSM.
+         impacto da solicitação (opcional). Valores possíveis: H=Alto, M=Médio, L=Baixo. Se não for informado, o impacto será calculado a partir dos parâmetros do catálogo de serviço do CITSmart ITSM.
     ```
 
-    ```tab="Output Attributes"
-    Same as the Input
+    ```tab="Atributos de Saída"
+    Os mesmos que os atributos de entrada.
     ```
 
-    ```JSON tab="JSON Example"
+    ```JSON tab="Exemplo JSON"
     {"Synchronize": true,
     "request": {"numberOrigin": "9999",
     "userID": "ciclano.de.tal",
@@ -140,33 +140,33 @@ Os Web Services foram criados no CTSmart ESP para inclusão, atualização, cons
     "department" "Service": {"name": "SERVICO.TESTE.2",
     "category": {"name": "Category 2"}}}}
    
-    Assuming that the platform attribute in the login was informed by "user" and considering the synchronize attribute equal to true, the CITSmart will:
-        Include the applicant in the user registry, if it does not exist in the database;
-        Include the service in the service catalog of contract 1, if it does not exist in the database and register the service FROM-TO for the client;
-        Change the requestor and service from the request with source number 9999.
+    Supondo que no atributo platform no login foi informado "usuário" e considerando o atributo synchronize igual a true, o CITSmart irá:
+        Incluir o solicitante no cadastro de usuários, caso não exista na base;
+        Incluir o serviço no catálogo de serviços do contrato 1, caso não exista na base e registrar o DE-PARA de serviços para o cliente;
+        Alterar o solicitante e serviço da solicitação com número de origem 9999.
     ```
 
-###CHANGING THE STATUS OF AN INCIDENT/REQUEST
+###Alteração da situação de um Incidente/Requisição
 
 
-!!! example "Changing the Status of an Incidents/Requests"
+!!! example "Alteração da situação de um Incidente/Requisição"
     ```tab="URL"
     /services/request/updateStatus
     ```
 
-    ```tab="Input Attributes"
-    ​​number - request number in CITSmart. Required when the numberOrigin attribute is not informed.
-    numberOrigin - the request number on the source system. Required when the number attribute is not entered.
-    status - status of the request, containing:
-        code - situation code (required). Possible values: On End, Suspended, Canceled, Resolved, Reopened, Closed.
-        details - complement of justification to change the situation (optional).
+    ```tab="Atributos de entrada"
+    ​​number - número da solicitação no CITSmart ITSM. Obrigatório quando o atributo numberOrigin não for informado.
+    numberOrigin - número da solicitação no sistema de origem. Obrigatório quando o atributo number não for informado.
+    status - situação da solicitação, contendo:
+        code - código da situação (obrigatório). Valores possíveis: EmAndamento, Suspensa, Cancelada, Resolvida, Reaberta, Fechada.
+        details - complemento da justificativa para alteração da situação (opcional).
     ```
 
-    ```tab="Output Attributes"
-        Same as the Input
+    ```tab="Atributos de saída"
+        Os mesmos que os atributos de entrada.
     ```
 
-    ```JSON tab="JSON Example"
+    ```JSON tab="Exemplo JSON"
        {"numberOrigin": "9999",
        "status": {"code": "Suspended",
        "details": "Integration Testing"}}
