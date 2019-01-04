@@ -100,7 +100,7 @@ Esta seção destina-se a descrever a estrutura de comunicação REST, estabelec
     
 ###LIST PROCESS TYPE
 
-!!! example "Service of listing the process type of a process, to be used"
+!!! example "Serviço de listagem do tipo de processo de um processo, a ser usado"
 	```tab="Method"
 	GET
 	```
@@ -130,18 +130,18 @@ Esta seção destina-se a descrever a estrutura de comunicação REST, estabelec
 	```
 
 	```tab="Fields"
-	Request:
-	   name: alphanumeric not empty and not null
-	   token: alphanumeric not empty and not null
-	Response:
-	  typeProcess: List empty and not null;
-	  id: numeric not empty and not null
-	  name: alphanumeric not empty and not null
-	  description: alphanumeric not empty and not null
+	Solicitação:
+	   name: alfanumérico não vazio nem nulo
+	   token: alfanumérico não vazio nem nulo
+	Resposta:
+	  typeProcess: Lista vazia e não nula;
+	  id: numérico não vazio nem nulo
+	  name: alfanumérico não vazio nem nulo
+	  description: alfanumérico não vazio nem nulo
 	```
 ###LIST LEVEL ACCESS TYPE PROCESS
 
-!!! example "The subject listing service of a process and / or document, to be used."
+!!! example "O serviço de listagem de assunto de um processo e / ou documento, a ser usado."
 	```tab="Method"
 	GET
 	```
@@ -175,18 +175,18 @@ Esta seção destina-se a descrever a estrutura de comunicação REST, estabelec
 	```
 
 	```tab="Fields"
-	Request:
- 	   idTypeProcess: numeric not empty and not null
-	   token: alphanumeric not empty and not null
-	Response:
-	  levelAccessTypeProcess: list not empty and not null;
-	  idLevelAccess: numeric not empty and not null
-	  idLevelAccessTypeProcess: numeric not empty and not null
- 	  name: alphanumeric not empty and not null
+	Solicitação:
+ 	   idTypeProcess: numérico não vazio nem nulo
+	   token: alfanumérico não vazio nem nulo
+	Resposta:
+	  levelAccessTypeProcess: lista não vazia nem nula;
+	  idLevelAccess: numérico não vazio nem nulo
+	  idLevelAccessTypeProcess: numérico não vazio nem nulo
+ 	  name: alfanumérico não vazio nem nulo
 	```
 ### LIST LEVEL ACCESS TYPE DOCUMENT
 
-!!! example "The subject listing service of a process and / or document, to be used."
+!!! example "O serviço de listagem de assunto de um processo e / ou documento, a ser usado."
 	```tab="Method"
  	GET
 	```
@@ -221,19 +221,19 @@ Esta seção destina-se a descrever a estrutura de comunicação REST, estabelec
 	```
 
 	```tab="Fields"
-	Request:
-	  idTypeDocument: numeric not empty and not null
-	  token: alphanumeric not empty and not null
-	Response:
-	  levelAccesTypeDocument: list not empty and not null;
-	  idLevelAccess: numeric not empty and not null
-	  idLevelAccessTypeDocument: numeric not empty and not null
-  	  name: alphanumeric not empty and not null
+	Solicitação:
+	  idTypeDocument: numérico não vazio nem nulo
+	  token: alfanumérico não vazio nem nulo
+	Resposta:
+	  levelAccesTypeDocument: lista não vazia nem nula;
+	  idLevelAccess: numérico não vazio nem nulo
+	  idLevelAccessTypeDocument: numérico não vazio nem nulo
+  	  name: alfanumérico não vazio nem nulo
 	```
 ###LIST SUBJECT
 
 
-!!! example "The subject listing service of a process and / or document, to be used."
+!!! example "O serviço de listagem de assunto de um processo e / ou documento, a ser usado."
 	```tab="Method"
  	GET
 	```
@@ -265,16 +265,16 @@ Esta seção destina-se a descrever a estrutura de comunicação REST, estabelec
 	```
 
 	```tab="Fields"
-	Request:
-	  name: alphanumeric not empty and not null
-	  code: alphanumeric not empty and not null
-	  token: alfanumeric not empty and not null
- 	Response:
-	  subjects: List empty and not null;
-	  id: numeric not empty and not null
-	  code: alphanumeric not empty and not null
-	  name: alphanumeric not empty and not null
-	  subject: alphanumeric not empty and not null
+	Solicitação:
+	  name: alfanumérico não vazio nem nulo
+	  code: alfanumérico não vazio nem nulo
+	  token: alfanumérico não vazio nem nulo
+ 	Resposta:
+	  subjects: Lista vazia e não nula;
+	  id: numérico não vazio nem nulo
+	  code: alfanumérico não vazio nem nulo
+	  name: alfanumérico não vazio nem nulo
+	  subject: alfanumérico não vazio nem nulo
 	```
 ### LIST LEGAL HYPOTHESES
 
