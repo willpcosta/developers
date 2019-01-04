@@ -55,26 +55,26 @@ Os Web Services foram criados no CTSmart ESP para inclusão, atualização, cons
       -groupId - sigla do grupo executor no CITSmart (opcional). Se não for informada, o grupo executor será obtido a partir dos parâmetros do catálogo de serviço do CITSmart. 
     ```
 
-    ```tab="Output Attributes"
-    Output Attributes are composed of all Input Attributes of the CtRequest class plus the following information:
-      number - number of the request created in CITSmart.
-      startSLA - SLA start date and time.
-      endSLA - SLA end date and time.
-      status - status of the request, containing:
-         code - code of the situation.
-         name - name of the situation.
-      currentTask - current task, containing:
-         number - task number
-         name - name of the task.
-         startDateTime - start date and time
-         status - task status, containing:
-            code: code of the situation.
-            name: name of the situation.
-      userId - login of the user responsible for the task.
-      groupId - acronym of the group responsible for the task.
+    ```tab="Atributos de Saída"
+    Os atributos de saída são compostos de todos os atributos de entrada da classe CtRequest, mais as seguintes informações:
+      number - número da solicitação criada no Citsmart ITSM.
+      startSLA - data e hora de início do SLA.
+      endSLA - data e hora de término do SLA.
+      status - situação da solicitação, contendo:
+         code - código da situação.
+         name - nome da situação.
+      currentTask - tarefa atual, contendo:
+         number - número da tarefa
+         name - nome da tarefa.
+         startDateTime - data e hora de início
+         status - situação da tarefa, contendo:
+            code: código da situação.
+            name: nome da situação.
+      userId - login do usuário responsável pela tarefa.
+      groupId - sigla do grupo responsável pela tarefa.
     ```
 
-    ```JSON tab="JSON Example"
+    ```JSON tab="Exemplo JSON"
     {"Synchronize": true, 
     "sourceRequest": {"numberOrigin": "9999", 
     "type": "R", 
@@ -89,21 +89,21 @@ Os Web Services foram criados no CTSmart ESP para inclusão, atualização, cons
     " urgency " : "H", 
     "impact": "H"}
     }
-    Assuming that the platform attribute in the login was informed by user and considering the synchronize attribute equal to true, the CITSmart will:
-      - Check if there is an FROM-TO of contract 1 for the "user";
-      - Include the applicant in the user registry, if it does not exist in the database;
-      - Include the service in the service catalog of contract 1, if it does not exist in the database and register the service FROM-TO for the client;
-      - Include request with source number 9999;
-      - Register the DEPUT from the 9999 source request to the client.
+    Supondo que no atributo platform no login foi informado "usuário" e considerando o atributo synchronize igual a true, o CITSmart irá:
+      - Verificar se existe um DE-PARA do contrato 1 para o "usuário";
+      - Incluir o solicitante no cadastro de usuários, caso não exista na base;
+      - Incluir o serviço no catálogo de serviços do contrato 1, caso não exista na base e registrar o DE-PARA de serviços para o cliente;
+      - Incluir a solicitação com número de origem 9999;
+      - Registrar o DE-PARA da solicitação de origem 9999 para o cliente.
     ```
-###CHANGE INCIDENT/REQUEST INFORMATION
+###Alteração de Informações de Incidente/Requisição
 
-!!! example "Changing Information from Requests/Incidents"
+!!! example "Alterando informação de Requisição/Incidente"
     ```tab="URL"
     /services/request/create
     ```
 
-    ```tab="Input Attributes"
+    ```tab="Atributos de Entrada"
     ​​synchronize - indicates whether the user and / or service information will be synchronized.
     request - request information from the CtRequest class, containing:
         numberOrigin - the request number on the source system. Required when the number attribute is not entered.
