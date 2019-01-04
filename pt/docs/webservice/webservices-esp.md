@@ -4,55 +4,55 @@ Description: CITSmart - ESP Webservices
 Webservices ESP -Enterprise Service Platform
 ==============
 
-This document is intended to provide guidance regarding the Web Services made available for integration with CTSmart ITSM Service Management.
+Este documento tem o propósito de fornecer orientações a respeito dos Web Services disponibilizados para integração com o Gerenciamento de Serviço do Citsmart ITSM.
 <br>
-Web Services have been created in CTSmart ESP for inclusion, updating, consultation and cancellation of service requests (incidents and requisitions).
+Os Web Services foram criados no CTSmart ESP para inclusão, atualização, consulta e cancelamento de solicitações de serviço (incidentes e requisições).
 
 
-##Before getting started
+##Antes de começar
 
 
-1.  Before any CITSmart REST operation is used, the user must be authenticated.
-2.  Authentication is done through the REST login operation in the URL **/services/login**, which receives a **CtLogin** object containing the **userName**, **password**, and **platform** attributes.
-3.  The platform attribute must contain the ID of the site that is requesting the service.
-4.  The login operation returns an alphanumeric value in the **SessionID** attribute. This same **SessionID** must be used in the other REST calls. The returned object contains the code and description of the error in case of problems in executing the login operation.
-5.  The authenticated user composes the key for data synchronization, when the **synchronize** attribute is set to **true**.
-6.  Request inclusion and update services rely on the **synchronize** attribute. When this attribute is **true**, the user registration and catalog services are automatically created or updated in CITSmart from the information sent in the Web Service request.
-
->   **RULE: all REST services created in CITSmart receive an input object and return an object. In case of error, the return object contains the code and description of the error. When there is no error, in addition to the attributes defined for each service, the return object contains the date and time of execution and the id of the operation. CITSmart ensures that every request is recorded in its database and an operation ID is returned to the requester, even in case of error.**
+1.	Antes de se utilizar qualquer operação REST do CITSmart, é necessário que o usuário esteja autenticado.
+2.	A autenticação é feita através da operação REST login na URL /services/login, que recebe um objeto CtLogin contendo os atributos userName, password e platform.
+3.	O atributo platform deve conter a identificação do site que está solicitando o serviço.
+4.	A operação login retorna um valor alfanumérico no atributo SessionID. Este mesmo SessionID deve ser utilizado nas outras chamadas REST. O objeto retornado contém o código e descrição do erro em caso de problemas na execução da operação login.
+5.	O usuário autenticado compõe a chave para sincronização dos dados, quando o atributo synchronize tiver o valor true.
+6.	Os serviços de inclusão e atualização de solicitações contam com o atributo synchronize. Quando este atributo for true, o cadastro de usuário e o catálogo serviços serão automaticamente criados ou atualizados no CITSmart a partir das informações enviadas na solicitação do Web Service.  
 
 
-##Actions
+**REGRA: todos os serviços REST criados no CITSmart recebem um objeto de entrada e retornam um objeto. Em caso de erro, o objeto de retorno contém o código e a descrição do erro. Quando não houver erro, além dos atributos definidos para cada serviço, o objeto de retorno contém a data e hora de execução e o id da operação. O CITSmart garante que toda solicitação é registrada na sua base de dados e um ID da operação é retornado para o solicitante, mesmo em caso de erro.**
+
+##Ações
 
 
-###INCIDENT/REQUEST CREATION
+###Criação de Incidente/Requisição
 
-!!! example "Creating a Request /Incident"
+!!! example "Criando uma Requisição/Incidente"
     ```tab="URL"
     /services/request/create
     ```
 
-    ```tab="Input Attributes"
-    -synchronize - indicates whether the user and / or service information will be synchronized.
-    -sourceRequest - request information from the CtRequest class, containing:
-     -numberOrigin - the request number in the source system (mandatory. This attribute is required for CITSmart to keep FROM-TO between its database and the original source system number.
-     -type - request type (required). Possible values: I = Incident or R = Request.
-     -description - description of the incident or request (required).
-     -userID - applicant's user ID (required). It will be included if it does not exist in the Citsmart database and the synchronize attribute is equal to true.
-     -contact - data of the applicant. Required when the requestor does not exist in CITSmart and the synchronize attribute is equal to true).
-     -name - applicant name (required).
-      -phoneNumber - applicant's phone number (required).
-      -e-mail - applicant's e-mail (required).
-      -contractID - contract number in CITSmart (optional). If not informed, Citsmart will include the request linked to the default contract parameterized in the service.
-      -service - service data (optional). If not informed, Citsmart will include the request linked to the default service parameterized in the WebService registry.
-          -code - service code. Optional, if service name is given).
-          -name - service Name. Required when the service does not exist in CITSmart and the synchronize attribute is true.
-          -category - category of service. Required when the service does not exist in CITSmart and the synchronize attribute is true.
-             -code - category code.
-             -name - category name.
-      -urgency - urgency of the request (optional). Possible values: H = High, M = Average, L = Low. If not informed, the urgency will be calculated from the CITSmart service catalog parameters.
-      -impact of request (optional). Possible values: H = High, M = Medium, L = Low. If not informed, the impact will be calculated from the CITSmart service catalog parameters.
-      -groupId - execution group acronym in CITSmart (optional). If not informed, the executor group will be obtained from the CITSmart service catalog parameters.
+    ```tab="Atributos de Entrada"
+    -synchronize - indica se as informações de usuário e/ou serviço serão sincronizadas.
+    -sourceRequest - informações da solicitação origem da classe CtRequest, contendo:
+     -numberOrigin - número da solicitação no sistema de origem (obrigatório. Este atributo é necessário para que o CITSmart mantenha o DE-PARA entre sua base de dados e o número original do sistema origem.
+     -type - tipo da solicitação (obrigatório). Valores possíveis: I=Incidente ou R=Requisição.
+     -description - descrição do incidente ou requisição (obrigatório).
+     -userID - identificação de usuário do solicitante (obrigatório). Será incluído se não existir na base do Citsmart e o atributo synchronize for igual a true. 
+     -contact - dados do solicitante. Obrigatório quando o solicitante não existir no CITSmart e o atributo synchronize for igual a true).
+     -name - nome do solicitante (obrigatório).
+      -phoneNumber - telefone do solicitante (obrigatório).
+      -e-mail - e-mail do solicitante (obrigatório).
+      -contractID - número do contrato no CITSmart (opcional). Se não for informado, o Citsmart vai incluir a solicitação vinculada ao contrato default parametrizado no serviço.
+      -service - dados do serviço (opcional). Se não for informado, o Citsmart vai incluir a solicitação vinculada ao serviço default parametrizado no cadastro de WebService.
+          -code - código do serviço. Opcional, se nome do serviço for informado).
+          -name - nome do serviço. Obrigatório quando o serviço não existir no CITSmart e o atributo synchronize for igual a true.
+          -category - categoria do serviço. Obrigatório quando o serviço não existir no CITSmart e o atributo synchronize for igual a true.
+             -code - código da categoria.
+             -name - nome da categoria.
+      -urgency - urgência da solicitação (opcional). Valores possíveis: H=Alta, M=Média, L=Baixa. Se não for informada, a urgência será calculada partir dos parâmetros do catálogo de serviço do CITSmart.
+      -impact of request (opcional). Valores possíveis: H=Alto, M=Médio, L=Baixo. Se não for informado, o impacto será calculado a partir dos parâmetros do catálogo de serviço do CITSmart.
+      -groupId - sigla do grupo executor no CITSmart (opcional). Se não for informada, o grupo executor será obtido a partir dos parâmetros do catálogo de serviço do CITSmart. 
     ```
 
     ```tab="Output Attributes"
