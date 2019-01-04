@@ -674,7 +674,7 @@ Esta seção destina-se a descrever a estrutura de comunicação REST, estabelec
 
 ###GET BY ID PROCESS
  
-!!! example "Service that retrieves details of a process, according to its identifier."
+!!! example "Serviço que recupera detalhes de um processo, de acordo com seu identificador."
 	```tab="Method"
  	GET
 	```
@@ -727,36 +727,36 @@ Esta seção destina-se a descrever a estrutura de comunicação REST, estabelec
 	```
 
 	```tab="Fields"
-	Request:
- 	  id: numeric not empty and not null
-	  token: alphanumeric not empty and not null
-	Response:
-	  assuntoComplementar: alphanumeric not empty and not null
-	  observacaoGeral: alphanumeric not empty and not null
+	Solicitação:
+ 	  id: numérico não vazio nem nulo
+	  token: alfanumérico não vazio nem nulo
+	Resposta:
+	  assuntoComplementar: alfanumérico não vazio nem nulo
+	  observacaoGeral: alfanumérico não vazio nem nulo
 	  dataReferencia:
-	  unidade: not empty and not null;
-	     id: numeric not empty and not null
-	  nome: alfphanumeric not empty and not null
-	  tipoProcesso: not empty and not null;
-	     id: numeric not empty and not null
-	  nome: alphanumeric not empty and not null
-	     nivelAcesso: not empty and not null
-	     idNivelAcessoTipoProcesso: numeric not empty and not null
-	     descricao: alphanumeric not empty and not null
-	  hipoteseLegal: not empty and not null, if the access level differs from Public.
-	     id: numeric not empty and not null
-	     nome: alphanumeric not empty and not null
-	assunto: not empty and not null;
-	     id: numeric not empty and not null
-	     assunto: alphanumeric not empty and not null
-	interessados: can be empty and null;
-	     pessoa: not empty and not null;
-	        id: numeric not empty and not null;
-	        nome: : alphanumeric not empty and not null  
+	  unidade: não vazio nem nulo;
+	     id: numérico não vazio nem nulo
+	  nome: alfanumérico não vazio nem nulo
+	  tipoProcesso: não vazio nem nulo;
+	     id: numérico não vazio nem nulo
+	  nome: alfanumérico não vazio nem nulo
+	     nivelAcesso: não vazio nem nulo;
+	     idNivelAcessoTipoProcesso: numérico não vazio nem nulo
+	     descricao: alfanumérico não vazio nem nulo
+	  hipoteseLegal: não vazio nem nulo, se o nível de acesso for diferente de Público.
+	     id: numérico não vazio nem nulo
+	     nome: alfanumérico não vazio nem nulo
+	assunto: não vazio nem nulo;
+	     id: numérico não vazio nem nulo
+	     assunto: alfanumérico não vazio nem nulo
+	interessados: pode ser vazio e nulo;
+	     pessoa: não vazio nem nulo;
+	        id: numérico não vazio nem nulo
+	        nome: : alfanumérico não vazio nem nulo 
 	```
 ### LIST PROCESS
 
-!!! example "Listing of processes to be used by a document"
+!!! example "Listagem de processos a serem usados por um documento"
 	```tab="Method"
 	GET
 	```
@@ -802,34 +802,34 @@ Esta seção destina-se a descrever a estrutura de comunicação REST, estabelec
 	```
 
 	```tab="Fields"
-	Request:
- 	  nup: alphanumeric may be empty or null;
-	  token: alphanumeric not empty and not null
-	Response:
-	  id: numeric not empty and not null
-	  assuntoComplementar: alphanumeric not empty and not null
-	  status: alphanumeric not empty and not null
-  	     CONCLUIDO: "Completed";
-	     EM_ANDAMENTO: "In progress";
-	     AGUARDANDO_VALIDACAO: "Waiting for Validation"
-	     VALIDADO: "Validated";
-	     ANEXADO: "Attached";
-	  tipoProcesso: not empty and not null;
-	     id: numeric not empty and not null
-	     nome: alphanumeric not empty and not null
-	  nivelAcesso: not empty and not null
-	     idNivelAcessoTipoProcesso: numeric not empty and not null
-	     descricao: alphanumeric not empty and not null
-	  hipoteseLegal: not empty and not null, if the accessLevel differs from Public.
-	     id: numeric not empty and not null
-	     nome: alphanumeric not empty and not null
-	  assunto: not empty and not null ;
-	     id: numeric not empty and not null
-	     assunto: alphanumeric not empty and not null
-	  hipoteseLegal: not empty and not null, if the levelAccess differs from Public.
-	     id: numeric not empty and not null
-	     name: alphanumeric not empty and not null  
+	Solicitação:
+ 	  nup: alfanumérico podendo ser vazio ou nulo;
+	  token: alfanumérico podendo ser vazio ou nulo
+	Resposta:
+	  id: numérico não vazio nem nulo
+	  assuntoComplementar: alfanumérico podendo ser vazio ou nulo
+	  status: alfanumérico podendo ser vazio ou nulo
+  	     CONCLUIDO: "Concluído";
+	     EM_ANDAMENTO: "Em andamento";
+	     AGUARDANDO_VALIDACAO: "Aguardando validação "
+	     VALIDADO: "Válido";
+	     ANEXADO: "Anexado";
+	  tipoProcesso: não vazio nem nulo;
+	     id: numérico não vazio nem nulo
+	     nome: alfanumérico podendo ser vazio ou nulo
+	  nivelAcesso: não vazio nem nulo
+	     idNivelAcessoTipoProcesso: numérico não vazio nem nulo
+	     descricao: alfanumérico podendo ser vazio ou nulo
+	  hipoteseLegal: não vazio nem nulo, se o nível de acesso for diferente de Público.
+	     id: numérico não vazio nem nulo
+	     nome: alfanumérico podendo ser vazio ou nulo
+	  assunto: não vazio nem nulo;
+	     id: numérico não vazio nem nulo
+	     assunto: alfanumérico podendo ser vazio ou nulo
+	  hipoteseLegal: não vazio nem nulo, se o nível de acesso for diferente de Público.
+	     id: numérico não vazio nem nulo
+	     name: alfanumérico podendo ser vazio ou nulo 
 	```
 <hr>
 <font  Size=2><b>Produto/Versão:</b> CITSmart ESP | 8.00</font> &nbsp; &nbsp;
-<font  Size=2><b>Atualização:</b>13/12/2018 - Andre Luiz de Oliveira Fernandes</font>
+<font  Size=2><b>Atualização:</b>04/01/2019 - João Pelles Junior</font>
