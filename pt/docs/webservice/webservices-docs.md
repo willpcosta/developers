@@ -351,17 +351,17 @@ Esta seção destina-se a descrever a estrutura de comunicação REST, estabelec
 	```
 
 	```tab="Fields"
-	Request:
-	  name: alphanumeric not empty and not null
-	  token: alphanumeric not empty and not null
-	Response:
-	  people: List empty and not null;
-	  id: numeric not empty and not null
-  	  name: alphanumeric not empty and not null
+	Solicitação:
+	  name: alfanumérico não vazio nem nulo
+	  token: alfanumérico não vazio nem nulo
+	Resposta:
+	  people: Lista vazia e não nula;
+	  id: numérico não vazio nem nulo
+  	  name: alfanumérico não vazio nem nulo
 	```
 ###LIST FORM OF CONFERENCE
 
-!!! example "List of the conference forms of a process and / or document, to be used"
+!!! example "Lista dos formulários de conferência de um processo e / ou documento, a ser usado"
 	```tab="Method"
 	GET	
 	```
@@ -390,17 +390,17 @@ Esta seção destina-se a descrever a estrutura de comunicação REST, estabelec
 	```
 
 	```tab="Fields"
-	Request:
-	  name: alphanumeric not empty and not null
-	  token: alphanumeric not empty and not null
-	Response:
-	  formaConference: List empty and not null;
-	  id: numeric not empty and not null
-	  name: alphanumeric not empty and not null
+	Solicitação:
+	  name: alfanumérico não vazio nem nulo
+	  token: alfanumérico não vazio nem nulo
+	Resposta:
+	  formaConference: Lista vazia e não nula;
+	  id: numérico não vazio nem nulo
+	  name: alfanumérico não vazio nem nulo
 	```
 ### LIST MEDIA TYPES
 
-!!! example "List of media types for a document to be used"
+!!! example "Lista de tipos de mídia para um documento a ser utilizado."
 	```tab="Method"
 	GET
 	```
@@ -430,17 +430,17 @@ Esta seção destina-se a descrever a estrutura de comunicação REST, estabelec
 	```
 
 	```tab="Fields"
-	Request:
-	  name: alphanumeric not empty and not null
-	  token: alphanumeric not empty and not null
-	Response:
-	  typeSupport: List empty and not null;
-	  id: numeric not empty and not null
-	  name: alphanumeric not empty and not null  
+	Solicitação:
+	  name: alfanumérico não vazio nem nulo
+	  token: alfanumérico não vazio nem nulo
+	Resposta:
+	  typeSupport: Lista vazia e não nula;
+	  id: numérico não vazio nem nulo
+	  name: alfanumérico não vazio nem nulo 
 	```
 ###LIST DOCUMENT TYPES
 
-!!! example "Listing service of document types of a document, to be used."
+!!! example "Serviço de listagem de tipos de documentos de um documento a ser utilizado"
 	```tab="Method"
  	GET
 	```
@@ -469,17 +469,17 @@ Esta seção destina-se a descrever a estrutura de comunicação REST, estabelec
 	```
 
 	```tab="Fields"
-	Request:
-	  name: alphanumeric not empty and not null
-	  token: alphanumeric not empty and not null
-	Response:
-	  typeDocument: List empty and not null;
-	  id: numeric not empty and not null
-	  name: alphanumeric not empty and not null	  
+	Solicitação:
+	  name: alfanumérico não vazio nem nulo 
+	  token: alfanumérico não vazio nem nulo 
+	Resposta:
+	  typeDocument: Lista vazia e não nula;
+	  id: numérico não vazio nem nulo
+	  name: alfanumérico não vazio nem nulo 	  
 	```
 ###CREATE PROCESS
 
-!!! example "Service creating a process."
+!!! example "Serviço de criação de um processo"
 	```tab="Method"
  	POST
 	```
@@ -524,29 +524,29 @@ Esta seção destina-se a descrever a estrutura de comunicação REST, estabelec
 	```
 
 	```tab="Fields"
-	Request:
- 	  subjectComplementary: alphanumeric not empty and not null
-	  observationGeneral: alphanumeric not empty and not null
-	  unit: not empty and not null;
-	  id: not empty and not null ;
-	  typeProcess: not empty and not null;
-	     id: not empty and not null ;
-	  levelAccess: not empty and not null
-	     idLevelAccessTypeProcess: not empty and not null ;
-	  hypoteseLegal: not empty and not null if the access level differs from Public.
-	     id: numeric not empty and not null
-	  subject: not empty and not null ;
-  	     id: not empty and not null ;
-	  interested: can be empty and null;
-	    personal
-	  token: alphanumeric not empty and not null
-	Response:
-	  id: numeric not empty and not null
-	  nup: alphanumérico not empty and not null; 
+	Solicitação:
+ 	  subjectComplementary: alfanumérico não vazio nem nulo
+	  observationGeneral: alfanumérico não vazio nem nulo
+	  unit: não vazio nem nulo;
+	  id: não vazio nem nulo;
+	  typeProcess: não vazio nem nulo;
+	     id: não vazio nem nulo;
+	  levelAccess: não vazio nem nulo;
+	     idLevelAccessTypeProcess: não vazio nem nulo;
+	  hypoteseLegal: não vazio nem nulo se o nível de acesso difere de Público.
+	     id: númerico não vazio nem nulo
+	  subject: não vazio nem nulo;
+  	     id: não vazio nem nulo;
+	  interested: pode ser vazio e nulo;
+	    pessoal
+	  token: alfanumérico não vazio nem nulo
+	Resposta:
+	  id: numérico não vazio nem nulo
+	  nup: alfanumérico não vazio nem nulo 
 	```
 ###CREATE DOCUMENT
 
-!!! example "Document creation service"
+!!! example "Serviço de ciração de documento"
 	```tab="Method"
  	POST
 	```
@@ -608,42 +608,42 @@ Esta seção destina-se a descrever a estrutura de comunicação REST, estabelec
 	```
 
 	```tab="Fields"
-	Request:
-	  numero: alphanumeric not empty and not null;
-	  assuntoComplementar: alphanumeric not empty and not null
-	  localização: alphanumeric may be empty or null;
-	  conteudo: not empty and not null;
-	     The content of the document should be sent in base64
-	  dataReferencia: timestamp not empty and not null;
-	  unidade: not empty and not null;
-	     id: numeric not empty and not null
-	  processo: not empty and not null;
-	     id: numeric not empty and not null
-	  tipoDocumento: not empty and not null;
-	     id: numeric not empty and not null
-	  nivelAcesso: not empty and not null;
-	     idNivelAcessoTipoProcesso: numeric not empty and not null
-	  hipoteseLegal: not empty and not null, if the nível de acesso differs from Público;
-	     id: numeric not empty and not null
-	  assunto: not empty and not null;
-	     id: numeric not empty and not null
-	  destinatario: not empty and not null;
-	     pessoa: not empty and not null;
-	        id: numeric not empty and not null;
-	  tipoSuporteDocumento: not empty and not null;
-	  interessados: can be empty and null;
-	     pessoa: not empty and not null;
-	        id: numeric not empty and not null;
-	  tipoConferencia: boolean not empty and not null;
-	  localização: alphanumeric not null and non-empty, if the tipoConferencia attribute is true;
-	  token: alfanumeric not empty and not null
-	Response:
-	  id: numeric not empty and not null
-	  numero: not empty and not null 
+	Solicitação:
+	  numero: alfanumérico não vazio nem nulo;
+	  assuntoComplementar: alfanumérico não vazio nem nulo;
+	  localização: alfanumérico não vazio nem nulo;
+	  conteudo: não vazio nem nulo;
+	     O conteúdo do documento deve ser enviado em base64
+	  dataReferencia: timestamp não vazio nem nulo;
+	  unidade: não vazio nem nulo;
+	     id: numérico não vazio nem nulo
+	  processo: não vazio nem nulo;
+	     id: numérico não vazio nem nulo
+	  tipoDocumento: não vazio nem nulo;
+	     id: numérico não vazio nem nulo
+	  nivelAcesso: não vazio nem nulo;
+	     idNivelAcessoTipoProcesso: numérico não vazio nem nulo
+	  hipoteseLegal: não vazio nem nulo, se o nível de acesso for diferente de Público;
+	     id: numérico não vazio nem nulo
+	  assunto: não vazio nem nulo;
+	     id: numérico não vazio nem nulo
+	  destinatario: não vazio nem nulo;
+	     pessoa: não vazio nem nulo;
+	        id: numérico não vazio nem nulo
+	  tipoSuporteDocumento: não vazio nem nulo;
+	  interessados: pode ser vazio e nulo;
+	     pessoa: não vazio nem nulo;
+	        id: numérico não vazio nem nulo
+	  tipoConferencia: Boolean não vazio nem nulo;
+	  localização: alfanumérico não vazio nem nulo, se o atributo tipoConferencia for true;
+	  token: alfanumérico não vazio nem nulo;
+	Resposta:
+	  id: numérico não vazio nem nulo;
+	  numero: não vazio nem nulo;
 	```
 ###UPLOAD DOCUMENT
 
-!!! example "Document creation service"
+!!! example "Serviço de criação de documento."
 	```tab="Method"
  	POST
 	```
@@ -664,10 +664,10 @@ Esta seção destina-se a descrever a estrutura de comunicação REST, estabelec
 	```JSON tab="Response"
 	N/A
 	```tab="Fields"
-	Request:
- 	  idDocumento: numeric not empty and not null
-	  file: not empty and not null
-	  token: alphanumeric not empty and not null 
+	Solicitação:
+ 	  idDocumento: numérico não vazio nem nulo
+	  file: não vazio nem nulo
+	  token: alfanumérico não vazio nem nulo
 	```
 
 
