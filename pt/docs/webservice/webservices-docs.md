@@ -278,7 +278,7 @@ Esta seção destina-se a descrever a estrutura de comunicação REST, estabelec
 	```
 ### LIST LEGAL HYPOTHESES
 
-!!! example "List of legal hypotheses of a process or document, to be used."
+!!! example "Lista de hipóteses legais de um processo ou documento a ser utilizado."
 	```tab="Method"
 	GET
 	```
@@ -309,20 +309,20 @@ Esta seção destina-se a descrever a estrutura de comunicação REST, estabelec
 	```
 
 	```tab="Fields"
-	Request:
-	  idLevelAccess: numeric not empty and not null
-	  name: alphanumeric not empty and not null
-	  token: alphanumeric not empty and not null
-	Response:
-	  hypoteseLegal: List empty and not null;
-	  id: numeric not empty and not null
-   	  description: alphanumeric not empty and not null
-	  name: alphanumeric not empty and not null
+	Solicitação:
+	  idLevelAccess: numérico não vazio nem nulo
+	  name: alfanumérico não vazio nem nulo
+	  token: alfanumérico não vazio nem nulo
+	Resposta:
+	  hypoteseLegal: Lista vazia e não nula;
+	  id: numérico não vazio nem nulo
+   	  description: alfanumérico não vazio nem nulo
+	  name: alfanumérico não vazio nem nulo
 	```
 ### LIST PEOPLE
 
 
-!!! example "List of interested persons of a process or document, to be used.."
+!!! example "Lista de pessoas interessadas em um processo ou documento a ser utilizado."
 	```tab="Method"
 	GET
 	```
