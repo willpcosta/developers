@@ -172,45 +172,44 @@ Os Web Services foram criados no CTSmart ESP para inclusão, atualização, cons
        "details": "Integration Testing"}}
     ```
 
-###INQUIRE THE APPLICANT's INCIDENTS AND REQUESTS
+###Consultar Incidentes e Requisições do Solicitante
 
-!!! example "Inquire the applicant's Incidents and Requests"
+!!! example "Consultando Incidentes e Requisições do Solicitante"
     ```tab="URL"
     /services/request/getByUser
     ```
 
-    ```tab="Input Attributes"
-    userID - applicant's user ID (required).
-    description - description of the incident or request (optional).
-    startDate - start date of the request (optional).
-    endDate - end date of the request (optional).
-    service - service data (optional).
-       code - service code.
-       name - name of the service.
-    contractID - contract number in CITSmart (optional).
-    status - request status (optional), containing:
-       code - Location code. Possible values: Ending, Suspended, Canceled, Resolved, Reopened, Closed, Reclassified.
+    ```tab="Atributos de entrada"
+    userID - identificação de usuário do solicitante (obrigatório).
+    description - descrição do incidente ou requisição (opcional).
+    startDate - data de início da solicitação (opcional).
+    endDate - data de finalização da solicitação (opcional).
+    service - dados do serviço (opcional).
+       code - código do serviço.
+       name - nome do serviço.
+    contractID - número do contrato no CITSmart (opcional).
+    status - situação da solicitação (opcional), contendo:
+       code - código da situação. Valores possíveis: Em Andamento, Suspensa, Cancelada, Resolvida, Reaberta, Fechada, Reclassificada.
     ```
 
-    ```tab="Output Attributes"
-    Collection of objects of class CtRequest containing:
-       number - request number in CITSmart.
-       numberOrigin - the request number on the source system.
-       type - type of request. Possible values: I = Incident or R = Request
-       description - description of the incident or request.
-       userID - user ID of the requester.
-       urgency - urgency of the request (optional). Possible values: H = High, M = Average, L = Low. If not informed, the urgency will be calculated from the CITSmart service catalog parameters.
-       impact of request (optional). Possible values: H = High, M = Medium, L = Low. If not informed, the impact will be calculated from the CITSmart service catalog parameters.
-       groupId - execution group acronym in CITSmart (optional). If not informed, the executor group will be obtained from the CITSmart service catalog parameters.
-       startDateTime - the start date and time of the request.
-       startSLA - SLA start date and time.
-       endSLA - end date and time of the SLA.
-       status - status of the request, containing:
-          code - code of the situation.
-          name -name of the situation.
+    ```tab="Atributos de Saída"
+    Coleção de objetos da classe CtRequest contendo:
+       number - número da solicitação no Citsmart ITSM.
+       numberOrigin - número da solicitação no sistema de origem.
+       type - Tipo da solicitação. Valores possíveis: I=Incidente ou R=Requisição
+       description - descrição do incidente ou requisição.
+       userID - identificação de usuário do solicitante.
+       urgency - urgência da solicitação (opcional). Valores possíveis: H=Alta, M=Média, L=Baixa. Se não for informada, a urgência será calculada partir dos parâmetros do catálogo de serviço do CITSmart. 
+       groupId - sigla do grupo executor no CITSmart (opcional). Se não for informada, o grupo executor será obtido a partir dos parâmetros do catálogo de serviço do CITSmart.
+       startDateTime - data e hora de início da solicitação.
+       startSLA - data e hora de início do SLA.
+       endSLA - data e hora de término do SLA.
+       status - situação da solicitação, contendo:
+          code - código da situação.
+          name - nome da situação.
     ```
 
-    ```JSON tab="JSON Example"
+    ```JSON tab="Exemplo JSON"
     {"userID": "john elliot ",
     "startDate": "2015-09-16T03:00:00.000Z",
     "endDate": "2015-09-19T03:00:00.000Z"}
