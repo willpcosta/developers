@@ -31,13 +31,13 @@ Uma estrutura foi criada no banco de dados para armazenar os dados necessários 
 
 Todas as tabelas mantidas no Citrest possuem o prefixo Rest_ e possuem relacionamento com outras tabelas no modelo CITSmart: ObjetoNegocio, Grupo, Usuário e ProcessamentoBatch.
 
-##Classes Resources
+##Classes de Recursos  
 
-The Resources classes are simple classes, POJO, containing JAX-RS annotations to indicate existing mappings and operations.
+As Classes de Recursos são classes simples, POJO, contendo anotações JAX-RS para indicar mapeamentos e operações existentes.
 
-The Resources classes should be in the package br.com.centralit.citsmart.rest.resource and follow the naming pattern used in the other classes Resources, Rest \<NomeDoUC\> Resources.java.
+As classes Resources devem estar no pacote br.com.centralit.citsmart.rest.resource e seguir o padrão de nomenclatura usado nas outras classes Resources, Rest \ <NomeDoUC \> Resources.java.  
 
-The resource class that intercepts the http call to the webservice must be mapped to the web.xml file. For example:
+A Classe de Recurso que intercepta a chamada http para o webservice deve ser mapeada para o arquivo web.xml. Por exemplo:
 
 !!! Example 
     \<context-param\>  
@@ -47,36 +47,34 @@ The resource class that intercepts the http call to the webservice must be mappe
     ​\</param-value\>  
     \</context-param\>  
 
-A new instance of the Resource class is created for each request to that resource. Each resource method receives as a parameter a child instance of the CtMessage.java class and returns an object of type CtMessageResp. In this instance is attributed th value of the MessageID attribute. This instance is passed as a parameter to the execute method of the RestOperationUtil.java utility class.
+Uma nova instância da Classe de Recurso é criada para cada solicitação do recurso. Cada método de recurso recebe como um parâmetro uma instância filho da classe CtMessage.java e retorna um objeto do tipo CtMessageResp. Nesta instância é atribuído o valor do atributo MessageID. Essa instância é passada como um parâmetro para o método Execute da classe de utilitário RestOperationUtil.java.
 
-##Utility Classes
+##Classes de Utilidade
 
-The RestOperationUtil.java class is responsible for performing the validations and targeting of the resource request for the class responsible for the Operation.
+A classe RestOperationUtil.java é responsável por realizar as validações e o direcionamento da solicitação de recurso para a classe responsável pela Operação.
 
-The execute method (CtMessage input) is the method called by the Resources classes and receives as parameter an instance of CtMessage with the attribute MessageID assigned.
+O método Execute (entrada CtMessage) é o método chamado pelas classes de Recursos e recebe como parâmetro uma instância de CtMessage com o atributo MessageID atribuído.
 
-The RestOperationUtil class obtains next to class RestUtil.java an instance of each Service and performs the following verifications:
+A classe RestOperationUtil obtém junto à classe RestUtil.java uma instância de cada Serviço e executa as seguintes verificações:
 
--   Verifies whether the SessionId exists and is not expired.
--   Returns a RestSessionDTO object associated with the SessionId.
--   Verifies whether the operation exists in the Rest_Operation table and
-    returns the RestOperationDTO object.
--   Verifies whether any associated user group with the session has permission
-    on the Rest_Permission table.
+-   Verifica se o SessionId existe e não está expirado.
+-   Retorna um objeto RestSessionDTO associado ao SessionId.
+-   Verifica se a operação existe na tabela Rest_Operation e retorna o objeto RestOperationDTO.
+-   Verifica se algum grupo de usuários associado à sessão tem permissão na tabela Rest_Permission.
 
-Once these validations are done, the class performs the Operation Initialization, recording in the Rest_Execution table the attributes. The RestExecution table functions as a Execution Log table. Note that the execution is created with the status NotInitiated, that is, the operation has not yet been initialized. This status will be updated later according to the result of the operation execution.
+Depois que essas validações são feitas, a classe executa a Inicialização da Operação, registrando os atributos na tabela Rest_Execution. A tabela RestExecution funciona como uma tabela de Log de Execução. Observe que a execução é criada com o status NotInitiated, ou seja, a operação ainda não foi inicializada. Esse status será atualizado posteriormente de acordo com o resultado da execução da operação.
 
-After performing execution logging, the RestOperationUtil class instantiates the Operation class obtained from the JavaClass attribute of the Rest_Operation table and performs the call to the execute method.
+Depois de executar o log de execução, a classe RestOperationUtil instancia a classe Operation obtida do atributo JavaClass da tabela Rest_Operation e executa a chamada para o método execute.
 
-The execute method is a condition of the IRestOperation Interface contract. The classes that implement this interface need to implement the execute method.
+O método Execute é uma condição do contrato da Interface IRestOperation. As classes que implementam essa interface precisam implementar o método de execução.
 
-For each messageID a call is made to a specific method for treatment.
+Para cada messageID, é feita uma chamada para um método específico para tratamento.
 
-Each of these methods can make calls to the CITSmart Services Layer for reuse of services.
+Cada um desses métodos pode fazer chamadas para o CITSmart Services Layer para reutilização de serviços.
 
-##Specific Rules
+##Regras Específicas
 
-All classes responsible for webservice operation must be registered in the Rest_Operation table.
+Todas as classes responsáveis pela operação do serviço da web devem ser registradas na tabela Rest_Operation.
 
 Each operation has an associated class that obeys a standard RestOperation interface and is responsible for its execution.
 
