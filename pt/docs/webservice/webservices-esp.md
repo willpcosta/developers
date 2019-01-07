@@ -299,48 +299,48 @@ Os Web Services foram criados no CTSmart ESP para inclusão, atualização, cons
         "hour": "2219"}}
     ```
 
-###QUERY REQUEST OCCURENCES
+###Consultar ocorrências da solicitação
 
-!!! example "Querying Information from Requests/Incidents"
+!!! example "Consultar informações das solicitações/incidentes"
     ```tab="URL"
     /services/request/listOccurrences
     ```
 
-    ```tab="Input Attributes"
-    requestNumber - request number in CITSmart. Required when the requestNumberOrigin attribute is not informed.
-    requestNumberOrigin - request number in the source system. Required when the requestNumber attribute is not informed.
+    ```tab="Atributos de entrada"
+    requestNumber - número da solicitação no CITSmart. Obrigatório quando o atributo requestNumberOrigin não for informado.
+    requestNumberOrigin - número da solicitação no sistema de origem. Obrigatório quando o atributo requestNumber não for informado.
     ```
 
-    ```tab="Output Attributes"
-    Object of class CtOcurrence containing:
-        number - event number in CITSmart.
-        numberOrigin - occurrence number in the source system.
-        description - occurrence description.
-        date - date of record of occurrence.
-        Hour - time to record the occurrence in the format HH: MM.
-        userID - identification of the user responsible for recording the occurrence.
-        origin - origin of occurrence. Possible values: EMAIL, FONE_FAX, VOICE_MAIL, PERSONALLY, OTHERS.
-        category - category of occurrence. Possible Values: Creation, Monitoring, Update, Diagnosis, Investigation, Memo, Information, Return, Symptom, Outline, Executing, Exchanging, Reclaiming, Reclassification, Schedule, Suspend, Reopen, Targeting, Sharing, Cancellation Task, HomeSLA, SuspendedSLA, Approval, ReactivationSLA
-        elapsedTime - elapsed time (for Category of Executing type)
-        reason – reason for occurrence.
-        task - the task associated with the occurrence, containing:
-           number - task number.
-           name - name of the task.
-           startDateTime - start date and time.
-           endDateTime - date and time of execution.
-           status - status of the task, containing:
-              code - location code.
-              name - name of the situation.
-          userId - login of the user responsible for the execution of the task.
+    ```tab="Atributos de saída"
+    Objeto da classe CtOcurrence containing:
+        number - número do evento na CITSmart.
+        numberOrigin - número da ocorrência no sistema de origem.
+        description - descrição da ocorrência.
+        date - data do registro da ocorrência.
+        Hour - hora para registrar a ocorrência no formato HH:MM.
+        userID - identificação do usuário responsável por registrar a ocorrência.
+        origin - origem da ocorrência. Valores possíveis: EMAIL, FONE_FAX, VOICE_MAIL, PERSONALLY, OTHERS.
+        category - categoria da ocorrência. Valores possibles: Creation, Monitoring, Update, Diagnosis, Investigation, Memo, Information, Return, Symptom, Outline, Executing, Exchanging, Reclaiming, Reclassification, Schedule, Suspend, Reopen, Targeting, Sharing, Cancellation Task, HomeSLA, SuspendedSLA, Approval, ReactivationSLA
+        elapsedTime - tempo gasto (para categoria do tipo de execução)
+        reason – motivo da ocorrência.
+        task - tarefa associada com a ocorrência, contendo:
+           number - número da tarefa.
+           name - nome da tarefa.
+           startDateTime - hora e data inicial.
+           endDateTime - hora e data da execução.
+           status - status da tarefa, contendo:
+              code - código da localização.
+              name - nome da situação.
+          userId - login do usuário responsável pela execução da tarefa.
     ```
 
-    ```JSON tab="JSON Example"
+    ```JSON tab="Exemplo JSON"
     {"requestNumberOrigin":"9999"}
     ```
 
 <hr>
 <font  Size=2><b>Produto/Versão:</b> CITSmart ESP | 8.00</font> &nbsp; &nbsp;
-<font  Size=2><b>Atualização:</b>12/12/2018 - Andre Luiz de Oliveira Fernandes</font>
+<font  Size=2><b>Atualização:</b>07/01/2019 - João Pelles Junior</font>
 	
 
 
