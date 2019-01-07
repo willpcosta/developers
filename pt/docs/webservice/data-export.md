@@ -29,9 +29,9 @@ Abaixo estão listadas as possibilidades e parâmetros que podem ser usados para
 	SELECT * FROM <TABLE_NAME> WHERE <PK_FIELD> = <PK_VALUE>
 	```
 
-	```tab="Example"
+	```tab="Exemplo"
 	http://localhost/citsmart/services/data/process/19
-	   It will search the table PROCESS with the PK Key equal to 19.
+	   Ele irá procurar na tabela PROCESS com a chave PK igual a 19.
 	```
 
 ##Consulta por PK e Where
@@ -45,7 +45,7 @@ Abaixo estão listadas as possibilidades e parâmetros que podem ser usados para
 	SELECT * FROM <TABLE_NAME> WHERE <PK_FIELD> = <PK_VALUE> AND (<ADDITIONAL_CLAUSES>)
 	```
 
-	```tab="Example"
+	```tab="Exemplo"
         http://localhost/citsmart/services/data/cargos/22?cond=nomecargo like "Diretor"
 	```
 
@@ -60,7 +60,7 @@ Abaixo estão listadas as possibilidades e parâmetros que podem ser usados para
 	SELECT * FROM <TABLE_NAME> WHERE (<WHERE CRITERIA>) ORDER BY <ORDERING FIELD>
 	```
 
-	```tab="Example"
+	```tab="Exemplo"
 	http://localhost/citsmart/services/data/cargos?cond=idcargo<15 and idcargo > 10&order=nomecargo
 	```
 
@@ -78,7 +78,7 @@ Abaixo estão listadas as possibilidades e parâmetros que podem ser usados para
 	SELECT * FROM <TABLE_NAME> WHERE (<WHERE CRITERIA>) ORDER BY <ORDERING FIELD>
 	```
 
-	```tab="Example"
+	```tab="Exemplo"
    	http://localhost/citsmart/services/data/localidade?cond=idlocalidade=1&order=idlocalidade&links=s
 	```
 
