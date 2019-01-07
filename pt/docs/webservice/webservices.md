@@ -25,11 +25,11 @@ O Citrest usa o RESTEasy, que é uma implementação da especificação JAX-RS q
 
 Este documento não tem a intenção de apresentar detalhes sobre a implementação RESTful ou RESTEasy, já que existe extensa documentação na Internet sobre o assunto, como no site http://www.jboss.org/resteasy.
 
-##Data Model
+##Modelo de dados 
 
-A structure has been created in the database to store data required for Citrest to function. The rest_v2.pdm data model is located in the**CitCorporeWeb/Model **directory.
+Uma estrutura foi criada no banco de dados para armazenar os dados necessários para o funcionamento do Citrest. O modelo de dados rest_v2.pdm está localizado no diretório ** CitCorporeWeb/Model** .
 
-All tables maintained in Citrest have the prefix Rest\_ and have relationships with other tables in the CITSmart model: ObjetoNegocio, Grupo, Usuário, and ProcessamentoBatch.
+Todas as tabelas mantidas no Citrest possuem o prefixo Rest_ e possuem relacionamento com outras tabelas no modelo CITSmart: ObjetoNegocio, Grupo, Usuário e ProcessamentoBatch.
 
 ##Classes Resources
 
