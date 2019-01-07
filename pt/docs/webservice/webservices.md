@@ -39,7 +39,7 @@ As classes Resources devem estar no pacote br.com.centralit.citsmart.rest.resour
 
 A Classe de Recurso que intercepta a chamada http para o webservice deve ser mapeada para o arquivo web.xml. Por exemplo:
 
-!!! Example 
+!!! Example "Exemplo" 
     \<context-param\>  
     \<param-name\>resteasy-resources2\</param-name\>  
     \<param-value\>  
