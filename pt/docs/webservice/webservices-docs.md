@@ -87,7 +87,7 @@ Esta seção destina-se a descrever a estrutura de comunicação REST, estabelec
 	}
 	```
 
-	```tab="Resposta"
+	```tab="Campos"
 	Solicitação:
 	   name: alfanumérico não vazio nem nulo
 	   token: alfanumérico não vazio nem nulo
@@ -129,7 +129,7 @@ Esta seção destina-se a descrever a estrutura de comunicação REST, estabelec
 	}
 	```
 
-	```tab="Resposta"
+	```tab="Campos"
 	Solicitação:
 	   name: alfanumérico não vazio nem nulo
 	   token: alfanumérico não vazio nem nulo
@@ -173,7 +173,7 @@ Esta seção destina-se a descrever a estrutura de comunicação REST, estabelec
 	}
 	```
 
-	```tab="Resposta"
+	```tab="Campos"
 	Solicitação:
  	   idTypeProcess: numérico não vazio nem nulo
 	   token: alfanumérico não vazio nem nulo
@@ -219,7 +219,7 @@ Esta seção destina-se a descrever a estrutura de comunicação REST, estabelec
 	}
 	```
 
-	```tab="Resposta"
+	```tab="Campos"
 	Solicitação:
 	  idTypeDocument: numérico não vazio nem nulo
 	  token: alfanumérico não vazio nem nulo
@@ -263,7 +263,7 @@ Esta seção destina-se a descrever a estrutura de comunicação REST, estabelec
 	}
 	```
 
-	```tab="Resposta"
+	```tab="Campos"
 	Solicitação:
 	  name: alfanumérico não vazio nem nulo
 	  code: alfanumérico não vazio nem nulo
@@ -307,7 +307,7 @@ Esta seção destina-se a descrever a estrutura de comunicação REST, estabelec
 	}
 	```
 
-	```tab="Resposta"
+	```tab="Campos"
 	Solicitação:
 	  idLevelAccess: numérico não vazio nem nulo
 	  name: alfanumérico não vazio nem nulo
@@ -349,7 +349,7 @@ Esta seção destina-se a descrever a estrutura de comunicação REST, estabelec
 	} 
 	```
 
-	```tab="Resposta"
+	```tab="Campos"
 	Solicitação:
 	  name: alfanumérico não vazio nem nulo
 	  token: alfanumérico não vazio nem nulo
@@ -388,7 +388,7 @@ Esta seção destina-se a descrever a estrutura de comunicação REST, estabelec
 	}
 	```
 
-	```tab="Resposta"
+	```tab="Campos"
 	Solicitação:
 	  name: alfanumérico não vazio nem nulo
 	  token: alfanumérico não vazio nem nulo
@@ -428,7 +428,7 @@ Esta seção destina-se a descrever a estrutura de comunicação REST, estabelec
 	 
 	```
 
-	```tab="Resposta"
+	```tab="Campos"
 	Solicitação:
 	  name: alfanumérico não vazio nem nulo
 	  token: alfanumérico não vazio nem nulo
@@ -467,7 +467,7 @@ Esta seção destina-se a descrever a estrutura de comunicação REST, estabelec
 	} 
 	```
 
-	```tab="Resposta"
+	```tab="Campos"
 	Solicitação:
 	  name: alfanumérico não vazio nem nulo 
 	  token: alfanumérico não vazio nem nulo 
@@ -522,7 +522,7 @@ Esta seção destina-se a descrever a estrutura de comunicação REST, estabelec
 	}	 
 	```
 
-	```tab="Resposta"
+	```tab="Campos"
 	Solicitação:
  	  subjectComplementary: alfanumérico não vazio nem nulo
 	  observationGeneral: alfanumérico não vazio nem nulo
@@ -606,7 +606,7 @@ Esta seção destina-se a descrever a estrutura de comunicação REST, estabelec
 	} 
 	```
 
-	```tab="Resposta"
+	```tab="Campos"
 	Solicitação:
 	  numero: alfanumérico não vazio nem nulo;
 	  assuntoComplementar: alfanumérico não vazio nem nulo;
@@ -660,7 +660,7 @@ Esta seção destina-se a descrever a estrutura de comunicação REST, estabelec
 	}	 
 	```
 
-	```JSON tab="Resposta"
+	```JSON tab="Campos"
 	N/A
 	```tab="Resposta"
 	Solicitação:
@@ -725,7 +725,7 @@ Esta seção destina-se a descrever a estrutura de comunicação REST, estabelec
 	} 
 	```
 
-	```tab="Resposta"
+	```tab="Campos"
 	Solicitação:
  	  id: numérico não vazio nem nulo
 	  token: alfanumérico não vazio nem nulo
@@ -800,7 +800,7 @@ Esta seção destina-se a descrever a estrutura de comunicação REST, estabelec
 	} 
 	```
 
-	```tab="Resposta"
+	```tab="Campos"
 	Solicitação:
  	  nup: alfanumérico podendo ser vazio ou nulo;
 	  token: alfanumérico podendo ser vazio ou nulo
