@@ -5,7 +5,7 @@ Description: Webservices Neuro
 
 Este documento reúne os conhecimentos mínimos necessários para o adequado uso dos serviços via Rest.
 
-| **URL**                                      | **Description**                           | **Parameters**                                | **Return**                                        |
+| **URL**                                      | **Descrição**                           | **Parâmetros**                                | **Retorna**                                        |
 |----------------------------------------------|-------------------------------------------|-----------------------------------------------|---------------------------------------------------|
 | **/startWithMap/{name}**                     | Inicia um fluxo ESI a partir do nome                | name: Nome do fluxo cadastrado             | Objeto representativo do fluxo cadastrado      |
 | **/instance/initialize/{processInstanceId}** | Recupera os valores de uma instância de processo | processInstanceid: ID da instância de processo | Objeto representativo da instância de processo cadastrada |
