@@ -20,114 +20,109 @@ Este documento reúne os conhecimentos mínimos necessários para o adequado uso
 
 **Tabela 1 - Especificação das APPLICATION PROGRAMMABLE INTERFACES (APIs)**
 
-SPECIFIC GUIDELINES FOR REST API ACCESS
----------------------------------------
+##ORIENTAÇÕES ESPECÍFICAS PARA ACESSO À API REST
 
-In the following sections, each type of intended use for the services available via Rest is detailed in the CITSMart Enteprise Neuro product.
+Nas seções seguintes, está detalhado cada tipo de uso previsto para os serviços disponíveis via Rest no produto CITSmart Enteprise Neuro.
 
-###Authentication
+###Autenticação
 
-To use the APIs, the client must be logged into Neuro. To do this, simply get a token from the authentication service and inject that token into the header of each REST request with the authentication-token identifier.
-Authentication is done through the POST **/cit-esi-web/rest/security/token** service, passing a JSON object with the username and password attributes in the body.
+Para usar as APIs, o cliente deve estar logado no Neuro. Para isso, basta obter um token a partir do serviço de autenticação e injetar esse token no header de cada requisição REST com o identificador authentication-token. A autenticação é feita através do serviço POST /cit-esi-web/rest/security/token, passando um objeto JSON com os atributos username e password no body.
 
 ![](../img/9181.png)
 
-**Figure 1 - Example using the Chrome Restart Client plugin**
+**Figura 1 - Exemplo utilizando o plugin Restlet Client do Chrome**
 
-###Business Objects REST API
+###API REST de objetos de negócio
 
-Each business object provides a set of REST services that can be consumed from the URL **/cit-esi-web/dynamic/{application name}/{business object name}**. These are basic services for creating, updating, listing and deleting the business object, as well as a getStructure method that returns the metadata of the business object. Each SQL created in the business object can also be called in method form.
-Following are examples using the hotel business object of the hotels application. For each request, the authentication-token obtained in the login service must be provided. The url should end with ".json".
+Cada objeto de negócio disponibiliza um conjunto de serviços REST que pode ser consumido a partir da URL /cit-esi-web/dynamic/{nome da aplicação}/{nome do objeto de negócio}. São serviços básicos de criação, atualização, listagem e exclusão do objeto de negócio, além de um método getStructure que retorna o metadado do objeto de negócio. Cada SQL criado no objeto de negócio também pode ser chamado na forma de método. Seguem exemplos utilizando o objeto de negócio hotel da aplicação hotéis. Para cada requisição, deve ser fornecido o authentication-token obtido no serviço de login. A url deve terminar com “.json”.
 
-####Inclusion of business object
+####Inclusão de objeto de negócio
 
 -   **HTTP verb**: POST
 -   **URL:** /cit-esi-web/rest/dynamic/{application name}/{business object name}.json
--   **Body:** JSON containing the attributes of the business object record to be included
+-   **Body:** JSON contendo os atributos do registro do objeto de negócio a ser incluído
 
 ![](../img/9182.png)
 
-**Figure 2 - Inclusion of business object**
+**Figura 2 - Inclusão de objeto de negócio**
 
-####Business Object Change
+####Alteração de objeto de negócio
 
 -   **HTTP verb**: POST
 -   **URL:** /cit-esi-web/rest/dynamic/{application name}/{business object name} /update.json
--   **Body:** JSON containing the attributes of the business object record to be changed
+-   **Body:** JSON contendo os atributosdo registro do objeto de negócio a ser alterado
 
 ![](../img/9183.png)
 
 **Figure 3 - Change of business object**
 
-####Business Object Deletion
+####Exclusão de objeto de negócio
 
 -   **HTTP verb: **POST
 -   **URL:** /cit-esi-web/rest/dynamic/{application name}/{business object name}/remove.json
--   **Body: **JSON containing the primary key of the business object record to be deleted
+-   **Body: **JSON contendo a chave primária do registro do objeto de negócio a ser excluído
 
 ![](../img/9184.png)
 
-**Figure 4 - Business Object Deletion**
+**Figura 4 - Exclusão de objeto de negócio**
 
-####Listing of business objects
+####Listagem de objetos de negócio
 
 -   **HTTP verb:** GET
 -   **URL:** /cit-esi-web/rest/dynamic/{application name}/{business object name}.json
 
 ![](../img/9185.png)
 
-**Figure 5 - Listing of business objects**
+**Figura 5 - Listagem de objetos de negócio**
 
-#### Business object recovery by primary key
+####Recuperação de objeto de negócio pela chave primária
 
 -   **HTTP verb: **POST
 -   **URL:** /cit-esi-web/rest/dynamic/{application name}/{business object name}/restore.json
--   **Body:** JSON containing:
-    -   The primary key of the business object record to be deleted
-    -   Attribute boolean findManyToOne, indicating whether the system should retrieve many relationships for one of the object
-    -   Boolean findOneToMany attribute, indicating whether the system should retrieve one-to-many relationships from the object
+-   **Body:** JSON contendo:
+    -   A chave primária do registro do objeto de negócio a ser excluído
+    -   Atributo boolean findManyToOne, indicando se o sistema deve recuperar os relacionamentos muitos para um do objeto
+    -   Atributo boolean findOneToMany, indicando se o sistema deve recuperar os relacionamentos um para muitos do objeto
+
 
 ![](../img/9186.png)
 
-**Figure 6 - Recovery of business object by primary key**
+**Figura 6 - Recuperação de objeto de negócio pela chave primária**
 
-#### Retrieving the structure of the business object
+####Recuperação da estrutura do objeto de negócio
 
 -   **HTTP verb: **GET
 -   **URL:** /cit-esi-web/rest/dynamic/{application name}/{business object name}/getStructure.json
 
 ![](../img/9187.png)
 
-**Figure 7 - Recovery of the structure of the business object**
+**Figura 7 - Recuperação da estrutura do objeto de negócio**
 
-#### SQL Execution of the Business Object
+####SQL Execution of the Business Object
 
 -   **HTTP verb**: POST
 -   **URL:** / cit-esi-web / rest / dynamic / {application name} / {business object name} /list.son
--   **Body:** JSON containing:
-    -   SQLName attribute with the name of the SQL to be executed
-    -   JSON dynamicModel attribute containing the expected parameter values in SQL
-    -   Attribute boolean findManyToOne (optional), indicating whether the system should retrieve many relationships for one of the object
-    -   Attribute boolean findOneToMany (optional), indicating whether the system should retrieve one-to-many relationships from the object
+-   **Body:** JSON contendo:
+    -   Atributo SQLName com o nome do SQL a ser executado
+    -   Atributo JSON dynamicModel contendo os valores dos parâmetros esperados no SQL
+    -   Atributo boolean findManyToOne (opcional), indicando se o sistema deve recuperar os relacionamentos muitos para um do objeto
+    -   Atributo boolean findOneToMany (opcional), indicando se o sistema deve recuperar os relacionamentos um para muitos do objeto
 
 ![](../img/9188.png)
 
-**Figure 8 - SQL execution of the business object**
+**Figura 8 - Execução de SQL do objeto de negócio**
 
-### Execution of ESI streams
+###Execução de fluxos ESI
 
-Any ESI stream can be executed via REST using the POST service **/cit-esi-web/rest/esi/execute/{stream name}**. For each request, the authentication-token obtained in the login service must be provided.
-In the body of the request a JSON containing the input variables required to execute the flow must be provided.
-The example below performs the job-search flow, providing the "12345" enrollment as the input variable of the stream.
-The stream returns the "employee" JSON object.
+Qualquer fluxo ESI pode ser executado via REST utilizando o serviço POST /cit-esi-web/rest/esi/execute/{nome do fluxo}. Para cada requisição, deve ser fornecido o authentication-token obtido no serviço de login. No corpo (body) da requisição deve ser fornecido um JSON contendo as variáveis de entrada necessárias à execução do fluxo. O exemplo abaixo executa o fluxo busca_empregado, fornecendo a matricula “12345” como variável de entrada do fluxo. O fluxo retorna o objeto JSON “empregado”.
 
 ![](../img/9189.png)
 
-**Figure 9 - Example of running ESI streams**
+**Figura 9 - Exemplo de execução de fluxos ESI**
 
 <hr>
 <font  Size=2><b>Produto/Versão:</b> CITSmart ESP | 8.00</font> &nbsp; &nbsp;
-<font  Size=2><b>Atualização:</b>12/12/2018 - Andre Luiz de Oliveira Fernandes</font>
+<font  Size=2><b>Atualização:</b>07/01/2019 - João Pelles Junior</font>
 	
 
 
