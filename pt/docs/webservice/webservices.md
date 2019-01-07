@@ -109,43 +109,41 @@ Cada operação pode ter um ou mais domínios de parâmetros na tabela Rest_Doma
 | **5**               | 1                   | 3         |
 | **5**               | 6                   | 3         |
 
-Each execution of a particular operation is recorded in the Rest_Execution table. This table records the date and time of the request, the id of the user requesting the execution, the input class, the input data, and the current execution status.
+Cada execução de uma operação específica é registrada na tabela Rest_Execution. Essa tabela registra a data e a hora da solicitação, o ID do usuário que está solicitando a execução, a classe de entrada, os dados de entrada e o status atual da execução.
 
-Each result of an execution is recorded in the Rest_Log table. This table records the execution date and time, the output class, the output data, and the execution status.
+Cada resultado de uma execução é registrado na tabela Rest_Log. Essa tabela registra a data e hora de execução, a classe de saída, os dados de saída e o status de execução.
 
-For the creation of a new resource the developer must follow the following
-parameterization steps:
+Para a criação de um novo recurso, o desenvolvedor deve seguir as seguintes etapas de parametrização:
 
--   Record an operation in the Rest_Operation table and tell which Java class will execute it.
--   Give operation execution permissions to one or more groups in the Rest_Permission table.
--   Record parameters in the Rest_Parameter table.
--   Associate the operation parameter domains in the Rest_Domain table.
+-   Registre uma operação na tabela Rest_Operation e diga qual classe Java irá executá-la.
+-   Conceda permissões de execução de operação para um ou mais grupos na tabela Rest_Permission.
+-   Registre os parâmetros na tabela Rest_Parameter.
+-   Associe os domínios do parâmetro de operação na tabela Rest_Domain.
 
-##Class Structure
+##Estrutura de Classe
 
-All classes used by Citrest must be defined by specific .XSD. From .XSD, classes can be generated automatically through the eclipse plugin or by xjc.jar, available at initiative 0015 in SharePoint. To generate the classes from xjc, you must use the following command line:
+Todas as classes usadas pelo Citrest devem ser definidas por .XSD específico. A partir de .XSD, as classes podem ser geradas automaticamente pelo plug-in do eclipse ou pelo xjc.jar, disponível na iniciativa 0015 no SharePoint. Para gerar as classes do xjc, você deve usar a seguinte linha de comando:
 
 xjc "{path and name of xsd}" -d "{absolute path to src} eg:
 D:\\Ambiente\\jboss\\server\\default\\deploy\\CitCorpore.war\\WEB-INF\\src}" -p {pakage name} eg: {br.com.centralit.citsmart.rest.schema}
 
-The .XSD should be in the br.com.centralit.citsmart.rest.xsd package and thegenerated classes should be in the br.com.centralit.citsmart.rest.schema package. In these packages there are already several .XSD and several classes used by Mobile that can be used as an example.
+O .XSD deve estar no pacote br.com.centralit.citsmart.rest.xsd e as classes geradas devem estar no pacote br.com.centralit.citsmart.rest.schema. Nesses pacotes já existem várias classes .XSD e várias usadas pelo Mobile que podem ser usadas como exemplo.
 
-##Class CtError
+##Classe CtError
 
-The CtError class is referenced by the other classes used to execute the Citrest operations.
+A classe CtError é referenciada pelas outras classes usadas para executar as operações do Citrest.
 
 ##Classe CtLogin E CtLoginResp
 
-Every running operation on Citrest requires a SessionID returned by login. The login is implemented in class
-br.com.centralit.citsmart.rest.resource.RestOperationResources and has as input an object of class CtLogin.
+Toda operação em execução no Citrest requer um SessionID retornado pelo login. O login é implementado na classe br.com.centralit.citsmart.rest.resource.RestOperationResources e tem como entrada um objeto da classe CtLogin.
 
-As a result of the login, the SessionID or a CtError object is returned by login through the CtLoginResp class.
+Como resultado do login, o objeto SessionID ou CtError é retornado pelo login por meio da classe CtLoginResp.
 
-##Error Treatment
+##Tratamento de Erro
 
-The error handling of any execute method must obey the encapsulation pattern of the CtError object implemented in the RestOperationUtil class.
+O tratamento de erros de qualquer método de execução deve obedecer ao padrão de encapsulamento do objeto CtError implementado na classe RestOperationUtil.
 
-!!! example
+!!! example "Exemplo"
     CtNotificationGetReasonsResp resp = **new** CtNotificationGetReasonsResp();  
     CtNotificationGetReasons input = (CtNotificationGetReasons) message;  
     **if** (input.getTaskId() == **null**) {  
@@ -159,17 +157,17 @@ The error handling of any execute method must obey the encapsulation pattern of 
     **return** resp;  
     }
 
-##Practical Example
+##Exemplo Prático
 
-For ease of understanding, this section details the implementation and operation of the GetByUser service used in Mobile. It is responsible for returning the list of requisitions and incidents in a given user's work portfolio.
+Para facilitar a compreensão, esta seção detalha a implementação e a operação do serviço GetByUser usado no Mobile. É responsável por retornar a lista de requisições e incidentes no portfólio de trabalho de um determinado usuário.
 
-The following steps were followed for its implementation:
+As seguintes etapas foram seguidas para sua implementação:
 
-1.  The XSD of the CtNotificationGetByUser and CtNotificationGetByUserResp classes were defined in the file br.com.centralit.citsmart.rest.xsd.MobileNotification.XSD
-2.  The classes were generated in the package br.com.centralit.citsmart.rest.schema by xjc.jar
-3.  The following entries have been added in the Web.xml file of the CITSmart project:
+1.  O XSD das classes CtNotificationGetByUser e CtNotificationGetByUserResp foi definido no arquivo br.com.centralit.citsmart.rest.xsd.MobileNotification.XSD
+2.  As classes foram geradas no pacote br.com.centralit.citsmart.rest.schema por xjc.jar
+3.  As entradas a seguir foram incluídas no arquivo Web.xml do projeto CITSmart:
 
-!!! example ""
+!!! example "Exemplo"
     \<context-param\>  
     \<param-name\>resteasy-resources3\</param-name\>  
     \<param-value\>  
@@ -181,9 +179,9 @@ The following steps were followed for its implementation:
     \<url-pattern\>/mobile/\*\</url-pattern\>  
     \</servlet-mapping\>  
 
-These entries specify that a new resource class exists for RESTEasy and any URL containing /mobile/ will be intercepted by the web service servlet.
+Essas entradas especificam que existe uma nova classe de recurso para o RESTEasy e qualquer URL que contenha / mobile / será interceptada pelo servlet de serviço da web.
 
-1.  The RestMobileResources class was created as follows:
+1.  A classe RestMobileResources foi criada da seguinte forma:
 !!! Example ""  
     \@Path("/mobile")  
     **public** **class** RestMobileResources {  
@@ -194,18 +192,18 @@ These entries specify that a new resource class exists for RESTEasy and any URL 
     **return** RestOperationUtil.*execute*(input);  
     }  
 
-The web.xml configuration and implementation above determine that  
-http://.../mobile/notification/getByUser calls will be intercepted by the
-RestMobileResources class.
+A configuração e implementação web.xml acima determinam que
+As chamadas http: //.../mobile/notification/getByUser serão interceptadas pela classe RestMobileResources.
 
-1.  The run of the RestOperationUtil class directs execution to the RestMobile class because it is the class that is associated with the notification_getByUser operation in the Rest_Operation table. In the RestMobile class, there is the execute method that obeys the default interface:
+
+1.  A execução da classe RestOperationUtil direciona a execução para a classe RestMobile porque é a classe associada à operação notification_getByUser na tabela Rest_Operation. Na classe RestMobile, existe o método execute que obedece à interface padrão:
 !!! Example ""  
     public CtMessageResp execute(RestSessionDTO restSessionDto, RestExecutionDTO restExecutionDto, RestOperationDTO restOperationDto, CtMessage message) throws AXBException
 
 
 <hr>
 <font  Size=2><b>Produto/Versão:</b> CITSmart ESP | 8.00</font> &nbsp; &nbsp;
-<font  Size=2><b>Atualização:</b>13/12/2018 - Andre Luiz de Oliveira Fernandes</font>
+<font  Size=2><b>Atualização:</b>07/01/2019 - João Pelles Junior</font>
 	
 
 
