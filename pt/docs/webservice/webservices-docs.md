@@ -11,10 +11,10 @@ Esta seção destina-se a descrever a estrutura de comunicação REST, estabelec
 
 --------
 
-### Login
+### LOGIN
  
 !!! example "Serviço de autentificação do usuário"
-	```tab="Method"
+	```tab="Método"
  	GET
 	```
 
@@ -22,14 +22,14 @@ Esta seção destina-se a descrever a estrutura de comunicação REST, estabelec
  	<url_base>/cit-portal-web/rest/usuario/getToken
 	```
 
-	```JSON tab="Request"
+	```JSON tab="Solicitação"
 	{
 	"username":"rogerio.cassimiro",
 	"password":"123456"
 	}
 	```
 
-	```JSON tab="Response"
+	```JSON tab="Resposta"
 	{
 	"id":25080,
 	"dateEdition":"2017-09-12T11:06:28.907-0300",
@@ -41,7 +41,7 @@ Esta seção destina-se a descrever a estrutura de comunicação REST, estabelec
 	}
 	```
 
-	```tab="Fields"
+	```tab="Campos"
 	Solicitação:
 	   username: alfanumérico não vazio nem nulo;
 	   password: alfanumérico não vazio nem nulo;
@@ -56,10 +56,10 @@ Esta seção destina-se a descrever a estrutura de comunicação REST, estabelec
 	```
             
 
-###LIST DEPARTMENT
+###LISTA DEPARTMENTO
 
 !!! example "Lista de serviços dos departamentos a serem usados."
-	```tab="Method"
+	```tab="Método"
  	GET
 	```
 
@@ -67,14 +67,14 @@ Esta seção destina-se a descrever a estrutura de comunicação REST, estabelec
  	<url_base>/cit-ecm-web/integracao /listUnidade
 	```
 
-	```JSON tab="Request"
+	```JSON tab="Solicitação"
 	 {
 	"name":"Department 1",
 	"token":"TGT-17-BI06OJWapCune4uamf6zUDOcyf0GNPPxjrOSDJ66ZxtcthZGhf-CITDFSRV074"
 	}
 	```
 
-	```JSON tab="Response"
+	```JSON tab="Resposta"
 	 	
 	{
 	"units":[
@@ -87,7 +87,7 @@ Esta seção destina-se a descrever a estrutura de comunicação REST, estabelec
 	}
 	```
 
-	```tab="Fields"
+	```tab="Resposta"
 	Solicitação:
 	   name: alfanumérico não vazio nem nulo
 	   token: alfanumérico não vazio nem nulo
@@ -98,10 +98,10 @@ Esta seção destina-se a descrever a estrutura de comunicação REST, estabelec
 	   code: alfanumérico não vazio nem nulo
 	```
     
-###LIST PROCESS TYPE
+###LISTA TIPO DE PROCESSO
 
 !!! example "Serviço de listagem do tipo de processo de um processo, a ser usado"
-	```tab="Method"
+	```tab="Método"
 	GET
 	```
 
@@ -110,14 +110,14 @@ Esta seção destina-se a descrever a estrutura de comunicação REST, estabelec
 
 	```
 
-	```JSON tab="Request"
+	```JSON tab="Solicitação"
 	{
 	"name":"Department 1",
 	"token":"TGT-17-BI06OJWapCune4uamf6zUDOcyf0GNPPxjrOSDJ66ZxtcthZGhf-CITDFSRV074"
 	}
 	```
 
-	```JSON tab="Response"
+	```JSON tab="Resposta"
 	{
 	"typeProcess":[
 	{
@@ -129,7 +129,7 @@ Esta seção destina-se a descrever a estrutura de comunicação REST, estabelec
 	}
 	```
 
-	```tab="Fields"
+	```tab="Resposta"
 	Solicitação:
 	   name: alfanumérico não vazio nem nulo
 	   token: alfanumérico não vazio nem nulo
@@ -139,10 +139,9 @@ Esta seção destina-se a descrever a estrutura de comunicação REST, estabelec
 	  name: alfanumérico não vazio nem nulo
 	  description: alfanumérico não vazio nem nulo
 	```
-###LIST LEVEL ACCESS TYPE PROCESS
+###LISTA NÍVEL DE ACESSO DO TIPO DE PROCESSO
 
 !!! example "O serviço de listagem de assunto de um processo e / ou documento, a ser usado."
-	```tab="Method"
 	GET
 	```
 
@@ -150,14 +149,14 @@ Esta seção destina-se a descrever a estrutura de comunicação REST, estabelec
 	<CITSMART_URL>/cit-ecm-web/integracao/listNivelAcessoTipoProcesso
 	```
 
-	```JSON tab="Request"
+	```JSON tab="Solicitação"
 	{
 	"idTypeProcess":"54654",
 	"token":"TGT-17-BI06OJWapCune4uamf6zUDOcyf0GNPPxjrOSDJ66ZxtcthZGhf-CITDFSRV074"
 	}
 	```
 
-	```JSON tab="Response"
+	```JSON tab="Resposta"
 	{
 	"levelAccessTypeProcess":[
 	{
@@ -174,7 +173,7 @@ Esta seção destina-se a descrever a estrutura de comunicação REST, estabelec
 	}
 	```
 
-	```tab="Fields"
+	```tab="Resposta"
 	Solicitação:
  	   idTypeProcess: numérico não vazio nem nulo
 	   token: alfanumérico não vazio nem nulo
@@ -184,10 +183,10 @@ Esta seção destina-se a descrever a estrutura de comunicação REST, estabelec
 	  idLevelAccessTypeProcess: numérico não vazio nem nulo
  	  name: alfanumérico não vazio nem nulo
 	```
-### LIST LEVEL ACCESS TYPE DOCUMENT
+### LISTA NÍVEL DE ACESSO DO TIPO DE DOCUMENTO
 
 !!! example "O serviço de listagem de assunto de um processo e / ou documento, a ser usado."
-	```tab="Method"
+	```tab="Método"
  	GET
 	```
 
@@ -196,14 +195,14 @@ Esta seção destina-se a descrever a estrutura de comunicação REST, estabelec
 
 	```
 
-	```JSON tab="Request"
+	```JSON tab="Solicitação"
 	{
 	"idTypeDocument":"54654",
 	"token":"TGT-17-BI06OJWapCune4uamf6zUDOcyf0GNPPxjrOSDJ66ZxtcthZGhf-CITDFSRV074"
 	}
 	```
 
-	```JSON tab="Response"
+	```JSON tab="Resposta"
 	{
 	"levelAccessTypeDocument":[
 	{
@@ -220,7 +219,7 @@ Esta seção destina-se a descrever a estrutura de comunicação REST, estabelec
 	}
 	```
 
-	```tab="Fields"
+	```tab="Resposta"
 	Solicitação:
 	  idTypeDocument: numérico não vazio nem nulo
 	  token: alfanumérico não vazio nem nulo
@@ -230,11 +229,11 @@ Esta seção destina-se a descrever a estrutura de comunicação REST, estabelec
 	  idLevelAccessTypeDocument: numérico não vazio nem nulo
   	  name: alfanumérico não vazio nem nulo
 	```
-###LIST SUBJECT
+###LISTA DE ASSUNTO
 
 
 !!! example "O serviço de listagem de assunto de um processo e / ou documento, a ser usado."
-	```tab="Method"
+	```tab="Método"
  	GET
 	```
 
@@ -243,7 +242,7 @@ Esta seção destina-se a descrever a estrutura de comunicação REST, estabelec
 
 	```
 
-	```JSON tab="Request"
+	```JSON tab="Solicitação"
 	{
 	"name":"HEARING.MEETINGS"
 	"code":"010.3",
@@ -251,7 +250,7 @@ Esta seção destina-se a descrever a estrutura de comunicação REST, estabelec
 	}
 	```
 
-	```JSON tab="Response" 	
+	```JSON tab="Resposta" 	
 	{
 	"subjects":[
 	{
@@ -264,7 +263,7 @@ Esta seção destina-se a descrever a estrutura de comunicação REST, estabelec
 	}
 	```
 
-	```tab="Fields"
+	```tab="Resposta"
 	Solicitação:
 	  name: alfanumérico não vazio nem nulo
 	  code: alfanumérico não vazio nem nulo
@@ -276,10 +275,10 @@ Esta seção destina-se a descrever a estrutura de comunicação REST, estabelec
 	  name: alfanumérico não vazio nem nulo
 	  subject: alfanumérico não vazio nem nulo
 	```
-### LIST LEGAL HYPOTHESES
+### LISTA DE HIPÓTESES LEGAIS
 
 !!! example "Lista de hipóteses legais de um processo ou documento a ser utilizado."
-	```tab="Method"
+	```tab="Método"
 	GET
 	```
 
@@ -288,7 +287,7 @@ Esta seção destina-se a descrever a estrutura de comunicação REST, estabelec
 
 	```
 
-	```JSON tab="Request"
+	```JSON tab="Solicitação"
 	{
 	"idLevelAccess":"97947",
 	"name":"Information name",
@@ -296,7 +295,7 @@ Esta seção destina-se a descrever a estrutura de comunicação REST, estabelec
 	}
 	```
 
-	```JSON tab="Response"
+	```JSON tab="Resposta"
 	{
 	"hypoteseLegal":[
 	{
@@ -308,7 +307,7 @@ Esta seção destina-se a descrever a estrutura de comunicação REST, estabelec
 	}
 	```
 
-	```tab="Fields"
+	```tab="Resposta"
 	Solicitação:
 	  idLevelAccess: numérico não vazio nem nulo
 	  name: alfanumérico não vazio nem nulo
@@ -319,11 +318,11 @@ Esta seção destina-se a descrever a estrutura de comunicação REST, estabelec
    	  description: alfanumérico não vazio nem nulo
 	  name: alfanumérico não vazio nem nulo
 	```
-### LIST PEOPLE
+### LISTA DE PESSOAS
 
 
 !!! example "Lista de pessoas interessadas em um processo ou documento a ser utilizado."
-	```tab="Method"
+	```tab="Método"
 	GET
 	```
 
@@ -332,14 +331,14 @@ Esta seção destina-se a descrever a estrutura de comunicação REST, estabelec
 
 	```
 
-	```JSON tab="Request"
+	```JSON tab="Solicitação"
 	{
 	"name":"Maycon",
 	"token":"TGT-17-BI06OJWapCune4uamf6zUDOcyf0GNPPxjrOSDJ66ZxtcthZGhf-CITDFSRV074"
 	}	 
 	```
 
-	```JSON tab="Response"
+	```JSON tab="Resposta"
 	{
 	"people":[
 	{
@@ -350,7 +349,7 @@ Esta seção destina-se a descrever a estrutura de comunicação REST, estabelec
 	} 
 	```
 
-	```tab="Fields"
+	```tab="Resposta"
 	Solicitação:
 	  name: alfanumérico não vazio nem nulo
 	  token: alfanumérico não vazio nem nulo
@@ -359,10 +358,10 @@ Esta seção destina-se a descrever a estrutura de comunicação REST, estabelec
 	  id: numérico não vazio nem nulo
   	  name: alfanumérico não vazio nem nulo
 	```
-###LIST FORM OF CONFERENCE
+###LISTA DA FORMA DE CONFERÊNCIA
 
 !!! example "Lista dos formulários de conferência de um processo e / ou documento, a ser usado"
-	```tab="Method"
+	```tab="Método"
 	GET	
 	```
 
@@ -371,14 +370,14 @@ Esta seção destina-se a descrever a estrutura de comunicação REST, estabelec
 
 	```
 
-	```JSON tab="Request"
+	```JSON tab="Solicitação"
 	 {
 	"name":"Administrative certified copy",
 	"token":"TGT-17-BI06OJWapCune4uamf6zUDOcyf0GNPPxjrOSDJ66ZxtcthZGhf-CITDFSRV074"
 	}
 	```
 
-	```JSON tab="Response"
+	```JSON tab="Resposta"
 	{
 	"formConference":[
 	{
@@ -389,7 +388,7 @@ Esta seção destina-se a descrever a estrutura de comunicação REST, estabelec
 	}
 	```
 
-	```tab="Fields"
+	```tab="Resposta"
 	Solicitação:
 	  name: alfanumérico não vazio nem nulo
 	  token: alfanumérico não vazio nem nulo
@@ -398,10 +397,10 @@ Esta seção destina-se a descrever a estrutura de comunicação REST, estabelec
 	  id: numérico não vazio nem nulo
 	  name: alfanumérico não vazio nem nulo
 	```
-### LIST MEDIA TYPES
+### LISTA DE TIPOS DE MÍDIA
 
 !!! example "Lista de tipos de mídia para um documento a ser utilizado."
-	```tab="Method"
+	```tab="Método"
 	GET
 	```
 
@@ -410,14 +409,14 @@ Esta seção destina-se a descrever a estrutura de comunicação REST, estabelec
 
 	```
 
-	```JSON tab="Request"
+	```JSON tab="Solicitação"
 	{
 	"name":"Name type media",
 	"token":"TGT-17-BI06OJWapCune4uamf6zUDOcyf0GNPPxjrOSDJ66ZxtcthZGhf-CITDFSRV074"
 	} 
 	```
 
-	```JSON tab="Response"
+	```JSON tab="Resposta"
 	{
 	"typeSupport":[
 	{
@@ -429,7 +428,7 @@ Esta seção destina-se a descrever a estrutura de comunicação REST, estabelec
 	 
 	```
 
-	```tab="Fields"
+	```tab="Resposta"
 	Solicitação:
 	  name: alfanumérico não vazio nem nulo
 	  token: alfanumérico não vazio nem nulo
@@ -438,10 +437,10 @@ Esta seção destina-se a descrever a estrutura de comunicação REST, estabelec
 	  id: numérico não vazio nem nulo
 	  name: alfanumérico não vazio nem nulo 
 	```
-###LIST DOCUMENT TYPES
+###LISTA TIPOS DE DOCUMENTO
 
 !!! example "Serviço de listagem de tipos de documentos de um documento a ser utilizado"
-	```tab="Method"
+	```tab="Método"
  	GET
 	```
 
@@ -450,14 +449,14 @@ Esta seção destina-se a descrever a estrutura de comunicação REST, estabelec
 
 	```
 
-	```JSON tab="Request"
+	```JSON tab="Solicitação"
 	 {
 	"name":"Document type name",
 	"token":"TGT-17-BI06OJWapCune4uamf6zUDOcyf0GNPPxjrOSDJ66ZxtcthZGhf-CITDFSRV074"
 	}
 	```
 
-	```JSON tab="Response"
+	```JSON tab="Resposta"
 	{
 	"typeDocument":[
 	{
@@ -468,7 +467,7 @@ Esta seção destina-se a descrever a estrutura de comunicação REST, estabelec
 	} 
 	```
 
-	```tab="Fields"
+	```tab="Resposta"
 	Solicitação:
 	  name: alfanumérico não vazio nem nulo 
 	  token: alfanumérico não vazio nem nulo 
@@ -477,10 +476,10 @@ Esta seção destina-se a descrever a estrutura de comunicação REST, estabelec
 	  id: numérico não vazio nem nulo
 	  name: alfanumérico não vazio nem nulo 	  
 	```
-###CREATE PROCESS
+###CRIAR PROCESSO
 
 !!! example "Serviço de criação de um processo"
-	```tab="Method"
+	```tab="Método"
  	POST
 	```
 
@@ -489,25 +488,25 @@ Esta seção destina-se a descrever a estrutura de comunicação REST, estabelec
 
 	```
 
-	```JSON tab="Request"
+	```JSON tab="Solicitação"
 	{
-	"assuntoComplementar":"Subject Detail",
-	"observacaoGeral":"General observation",
-	"unidade":{
+	"subjectComplementary":"Subject Detail",
+	"observationGeneral":"General observation",
+	"unit":{
 	"id":40358
 	},
-	"tipoProcesso":{
+	"typeProcess":{
 	"id":40394
 	},
-	"nivelAcesso":{
-	"idNivelAcessoTipoProcesso":40395
+	"levelAccess":{
+	"hypoteseLegal":40395
 	},
-	"assunto":{
+	"subject":{
 	"id":40393
 	},
-	"interessados":[
+	"interested":[
 	{
-	"interessado":{
+	"interested":{
 	"id":40355
 	}
 	}
@@ -516,14 +515,14 @@ Esta seção destina-se a descrever a estrutura de comunicação REST, estabelec
 	} 
 	```
 
-	```JSON tab="Response"
+	```JSON tab="Resposta"
 	{
 	"id":"25353",
 	"nup":"00001.00002/2016-58"
 	}	 
 	```
 
-	```tab="Fields"
+	```tab="Resposta"
 	Solicitação:
  	  subjectComplementary: alfanumérico não vazio nem nulo
 	  observationGeneral: alfanumérico não vazio nem nulo
@@ -544,10 +543,10 @@ Esta seção destina-se a descrever a estrutura de comunicação REST, estabelec
 	  id: numérico não vazio nem nulo
 	  nup: alfanumérico não vazio nem nulo 
 	```
-###CREATE DOCUMENT
+###CRIAR DOCUMENTO
 
 !!! example "Serviço de ciração de documento"
-	```tab="Method"
+	```tab="Método"
  	POST
 	```
 
@@ -556,7 +555,7 @@ Esta seção destina-se a descrever a estrutura de comunicação REST, estabelec
 
 	```
 
-	```JSON tab="Request"
+	```JSON tab="Solicitação"
 	{
 	"numero":"9999",
 	"assuntoComplementar":"Complementary Subject",
@@ -600,14 +599,14 @@ Esta seção destina-se a descrever a estrutura de comunicação REST, estabelec
 	} 
 	```
 
-	```JSON tab="Response"		
+	```JSON tab="Resposta"		
 	{
 	"id":"25353",
 	"numero":"00001.00002/2016-58"
 	} 
 	```
 
-	```tab="Fields"
+	```tab="Resposta"
 	Solicitação:
 	  numero: alfanumérico não vazio nem nulo;
 	  assuntoComplementar: alfanumérico não vazio nem nulo;
@@ -641,10 +640,10 @@ Esta seção destina-se a descrever a estrutura de comunicação REST, estabelec
 	  id: numérico não vazio nem nulo;
 	  numero: não vazio nem nulo;
 	```
-###UPLOAD DOCUMENT
+###DOCUMENTO UPLOAD
 
 !!! example "Serviço de criação de documento."
-	```tab="Method"
+	```tab="Método"
  	POST
 	```
 
@@ -653,7 +652,7 @@ Esta seção destina-se a descrever a estrutura de comunicação REST, estabelec
 
 	```
 
-	```JSON tab="Request"
+	```JSON tab="Solicitação"
 	{
 	"file":"9999",
 	"idDocumento":"25353",
@@ -661,9 +660,9 @@ Esta seção destina-se a descrever a estrutura de comunicação REST, estabelec
 	}	 
 	```
 
-	```JSON tab="Response"
+	```JSON tab="Resposta"
 	N/A
-	```tab="Fields"
+	```tab="Resposta"
 	Solicitação:
  	  idDocumento: numérico não vazio nem nulo
 	  file: não vazio nem nulo
@@ -675,7 +674,7 @@ Esta seção destina-se a descrever a estrutura de comunicação REST, estabelec
 ###GET BY ID PROCESS
  
 !!! example "Serviço que recupera detalhes de um processo, de acordo com seu identificador."
-	```tab="Method"
+	```tab="Método"
  	GET
 	```
 
@@ -684,13 +683,13 @@ Esta seção destina-se a descrever a estrutura de comunicação REST, estabelec
 
 	```
 
-	```JSON tab="Request" 	
+	```JSON tab="Solicitação" 	
 	{
 	"id":6967
 	}
 	```
 
-	```JSON tab="Response"
+	```JSON tab="Resposta"
 	{
 	"id":"5252",
 	"assuntoComplementar":"Complementary Subject",
@@ -726,7 +725,7 @@ Esta seção destina-se a descrever a estrutura de comunicação REST, estabelec
 	} 
 	```
 
-	```tab="Fields"
+	```tab="Resposta"
 	Solicitação:
  	  id: numérico não vazio nem nulo
 	  token: alfanumérico não vazio nem nulo
@@ -754,10 +753,10 @@ Esta seção destina-se a descrever a estrutura de comunicação REST, estabelec
 	        id: numérico não vazio nem nulo
 	        nome: : alfanumérico não vazio nem nulo 
 	```
-### LIST PROCESS
+### LISTA DE PROCESSO
 
 !!! example "Listagem de processos a serem usados por um documento"
-	```tab="Method"
+	```tab="Método"
 	GET
 	```
 
@@ -765,14 +764,14 @@ Esta seção destina-se a descrever a estrutura de comunicação REST, estabelec
  	<CITSMART_URL>/cit-ecm-web/integracao/listProcesso
 	```
 
-	```JSON tab="Request"
+	```JSON tab="Solicitação"
 	{
 	"nup":"00010.000012/2016-94",
 	"token":"TGT-17-BI06OJWapCune4uamf6zUDOcyf0GNPPxjrOSDJ66ZxtcthZGhf-CITDFSRV074"
 	} 
 	```
 
-	```JSON tab="Response"
+	```JSON tab="Resposta"
 	{
 	"processo":[
 	{
@@ -801,7 +800,7 @@ Esta seção destina-se a descrever a estrutura de comunicação REST, estabelec
 	} 
 	```
 
-	```tab="Fields"
+	```tab="Resposta"
 	Solicitação:
  	  nup: alfanumérico podendo ser vazio ou nulo;
 	  token: alfanumérico podendo ser vazio ou nulo
@@ -832,4 +831,4 @@ Esta seção destina-se a descrever a estrutura de comunicação REST, estabelec
 	```
 <hr>
 <font  Size=2><b>Produto/Versão:</b> CITSmart ESP | 8.00</font> &nbsp; &nbsp;
-<font  Size=2><b>Atualização:</b>04/01/2019 - João Pelles Junior</font>
+<font  Size=2><b>Atualização:</b>07/01/2019 - João Pelles Junior</font>
