@@ -490,23 +490,23 @@ Esta seção destina-se a descrever a estrutura de comunicação REST, estabelec
 
 	```JSON tab="Solicitação"
 	{
-	"subjectComplementary":"Subject Detail",
-	"observationGeneral":"General observation",
-	"unit":{
+	"assuntoComplementar":"Subject Detail",
+	"observacaoGeral":"General observation",
+	"unidade":{
 	"id":40358
 	},
-	"typeProcess":{
+	"tipoProcesso":{
 	"id":40394
 	},
-	"levelAccess":{
-	"hypoteseLegal":40395
+	"nivelAcesso":{
+	"idNivelAcessoTipoProcesso":40395
 	},
-	"subject":{
+	"assunto":{
 	"id":40393
 	},
-	"interested":[
+	"interessados":[
 	{
-	"interested":{
+	"interessado":{
 	"id":40355
 	}
 	}
