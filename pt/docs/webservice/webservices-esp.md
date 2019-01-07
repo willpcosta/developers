@@ -214,85 +214,85 @@ Os Web Services foram criados no CTSmart ESP para inclusão, atualização, cons
     "startDate": "2015-09-16T03:00:00.000Z",
     "endDate": "2015-09-19T03:00:00.000Z"}
     ```
-###INCIDENT DETAIL / REQUEST OF APPLICANT
+###Detalhe de Incidente/Requisição do Solicitante  
 
-!!! example "Details of The Request/Incident"
+!!! example "Detalhes da Requisição/Incidente"
     ```tab="URL"
     /services/request/getById
     ```
 
-    ```tab="Input Attributes"
-    number - request number in CITSmart. Required when the numberOrigin attribute is not informed.
-    numberOrigin - request number in the source system. Required when the number attribute is not entered.
+    ```tab="Atributos de entrada"
+    number - número da solicitação no Citsmart ITSM. Obrigatório quando o atributo numberOrigin não for informado.
+    numberOrigin - número da solicitação no sistema de origem. Obrigatório quando o atributo number não for informado.
     ```
 
-    ```tab="Output Attributes"
-    Output Attributes are composed of all Input Attributes of the CtRequest class plus the following information:
-      number - number of the request created in CITSmart.
-      startSLA - SLA start date and time.
-      endSLA - SLA end date and time.
-      status - status of the request, containing:
-         code - code of the situation.
-         name - name of the situation.
-      currentTask - current task, containing:
-         number - task number
-         name - name of the task.
-         startDateTime - start date and time
-         status - task status, containing:
-            code: code of the situation.
-            name: name of the situation.
-      userId - login of the user responsible for the task.
-      groupId - acronym of the group responsible for the task.
+    ```tab="Atributos de saída"
+    Atributos de Saída são compostos de todos os Atributos de Entrada da classe CtRequest mais as seguintes informações:
+      number - número da solicitação criada no CITSmart.
+      startSLA - hora e data inicial do SLA.
+      endSLA - hora e data final do SLA.
+      status - status da solicitação, contendo:
+         code - código da situação.
+         name - nome da situação.
+      currentTask - tarefa atual, contendo:
+         number - número da tarefa
+         name - nome da tarefa.
+         startDateTime - hora e data inicial
+         status - situação da tarefa, contendo:
+            code: código da situação.
+            name: nome da situação.
+      userId - login do usuário responsável pela tarefa.
+      groupId - acrônimo do grupo responsável pela tarefa.
     ```
 
-    ```JSON tab="JSON Example"
+    ```JSON tab="Exemplo JSON"
     {"numberOrigin":"9999"}
     ```
 
 
-###INCLUDES OCCURENCE ON REQUEST
+###Incluir Ocorrência na Solicitação
     
-!!! example "Include an occourrence on a Request"
+!!! example "Inclui uma ocorrência em uma solicitação"
     ```tab="URL"
     /services/request/createOccurrence
     ```
     
-    ```tab="Input Attributes"
-    requestNumber - request number in CITSmart. Required when the requestNumberOrigin attribute is not informed.
-    requestNumberOrigin - request number in the source system. Required when the requestNumber attribute is not informed.
-    ocurrence - object of class CtOccurrence, containing:
-        numberOrigin - occurrence number in the source system (optional).
-        description - occurrence description.
-        date - date of record of occurrence.
-        hour - time to record the occurrence in the format HH: MM.
-        category - category of occurrence. Possible values: Monitoring, Update, Diagnostics, Investigation, Memo, Information, Return, Symptom, Outline, Scheduling.
-        reason - reason for occurrence.
+    ```tab="Atributos de entrada"
+    requestNumber - número da solicitação no CITSmart. Obrigatório quando o atributo requestNumberOrigin não for informado.
+    requestNumberOrigin - número da solicitação no sistema de origem. Obrigatório quando o atributo requestNumber não for informado.
+    ocurrence - objeto da classe CtOccurrence, contendo:
+        numberOrigin - número da ocorrência no sistema de origem (opcional).
+        description - descrição da ocorrência.
+        date - data de registro da ocorrência.
+        hour - hora de registro da ocorrência no formato HH:MM.
+        category - categoria da ocorrência. Valores possíveis: Acompanhamento, Atualização, Diagnostico, Investigação, Memorando, Informação, Retorno, Sintoma, Contorno, Agendamento.
+        reason - motivo da ocorrência.
     ```
     
-    ```tab="Output Attributes"
-    Object of class CtOcurrence containing:
-        number - event number in CITSmart.
-        numberOrigin - occurrence number in the source system.
-        description - occurrence description.
-        date - date of record of occurrence.
-        Hour - time to record the occurrence in the format HH: MM.
-        userID - identification of the user responsible for recording the occurrence.
-        origin - origin of occurrence. Possible values: EMAIL, FONE_FAX, VOICE_MAIL, PERSONALLY, OTHERS.
-        category - category of occurrence. Possible Values: Creation, Monitoring, Update, Diagnosis, Investigation, Memo, Information, Return, Symptom, Outline, Executing, Exchanging, Reclaiming, Reclassification, Schedule, Suspend, Reopen, Targeting, Sharing, Cancellation Task, HomeSLA, SuspendedSLA, Approval, ReactivationSLA
-        elapsedTime - elapsed time (for Category of Executing type)
-        reason – reason for occurrence.
-        task - the task associated with the occurrence, containing:
-           number - task number.
-           name - name of the task.
-           startDateTime - start date and time.
-           endDateTime - date and time of execution.
-           status - status of the task, containing:
-              code - location code.
-              name - name of the situation.
-          userId - login of the user responsible for the execution of the task.
+    ```tab="Atributos de saída"
+    Objeto da classe CtOcurrence contendo:
+        number - número da ocorrência no CITSmart.
+        numberOrigin - número da ocorrência no sistema de origem.
+        description - descrição da ocorrência.
+        date - data de registro da ocorrência.
+        Hour - hora de registro da ocorrência no formato HH:MM.
+        userID - identificação do usuário responsável pelo registro da ocorrência.
+        origin - origem da ocorrência. Valores possíveis: EMAIL, FONE_FAX, VOICE_MAIL, PESSOALMENTE, OUTROS.
+        category - categoria da ocorrência. Valores possíveis: Criacao, Acompanhamento, Atualizacao, Diagnostico, Investigacao, Memorando, Informacao, Retorno, Sintoma, Contorno, Execucao, MudancaSLA, Reclassificacao, Agendamento, Suspensao, Reabertura, Direcionamento, Compartilhamento, CancelamentoTarefa, InicioSLA, SuspensaoSLA, Aprovacao, ReativacaoSLA
+        elapsedTime - tempo decorrido (para categoria do tipo Execucao)
+        reason – motivo da ocorrência.
+        task - tarefa associada à ocorrência, contendo:
+           number - número da tarefa.
+           name - nome da tarefa.
+           startDateTime - data e hora de início.
+           endDateTime - data e hora de execução.
+           status - situação da tarefa, contendo:
+              code - código da situação.
+              name - nome da situação.
+          userId - login do usuário responsável pela execução da tarefa.
     ```
     
-    ```JSON tab="JSON Example"
+    ```JSON tab="Exemplo JSON"
         {"requestNumberOrigin": "9999",
         "occurrence": {"description": "Occurrence test","category": {"code": "Workaround solution"},
         "date": "2015-08-20T03:00:00.000Z",
