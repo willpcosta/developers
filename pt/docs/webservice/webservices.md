@@ -27,7 +27,7 @@ Este documento não tem a intenção de apresentar detalhes sobre a implementaç
 
 ##Modelo de dados 
 
-Uma estrutura foi criada no banco de dados para armazenar os dados necessários para o funcionamento do Citrest. O modelo de dados rest_v2.pdm está localizado no diretório ** CitCorporeWeb/Model** .
+Uma estrutura foi criada no banco de dados para armazenar os dados necessários para o funcionamento do Citrest. O modelo de dados rest_v2.pdm está localizado no diretório **CitCorporeWeb/Model** .
 
 Todas as tabelas mantidas no Citrest possuem o prefixo Rest_ e possuem relacionamento com outras tabelas no modelo CITSmart: ObjetoNegocio, Grupo, Usuário e ProcessamentoBatch.
 
