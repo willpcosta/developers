@@ -142,6 +142,7 @@ Esta seção destina-se a descrever a estrutura de comunicação REST, estabelec
 ###LISTA NÍVEL DE ACESSO DO TIPO DE PROCESSO
 
 !!! example "O serviço de listagem de assunto de um processo e / ou documento, a ser usado."
+	```tab="Método"
 	GET
 	```
 
