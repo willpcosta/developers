@@ -1,30 +1,29 @@
-﻿Title: Webservices Information
-Description:  Webservices in CITSmart General Information
+﻿Title: Informações Webservice
+Description:  Webservices no Informações Gerais do CITSmart
 
-#Webservices in CITSmart
+#Webservices no CITSmart
 
 <table width='100%'>
 	<tr>
 		<td><a href='#project-layout' width="30%" ><img src='/img/bn-webservices.png'></a> </td>
-		<td class='md-typeset justificar' width="70%" > Web Service is a solution used in systems integration and communication between different applications. With this technology it is possible that new applications can interact with those that already exist and that systems developed in different platforms are compatible.</td>
+		<td class='md-typeset justificar' width="70%" > O Web Service é uma solução usada na integração de sistemas e comunicação entre diferentes aplicativos. Com essa tecnologia é possível que novas aplicações possam interagir com aquelas que já existem e que sistemas desenvolvidos em diferentes plataformas sejam compatíveis.</td>
 	</tr>
 	<tr>
 		<td><a href='#project-layout' width="30%" ><img </a> </td>
-		<td class='md-typeset justificar' width="70%" > Web Services are components that allow applications to send and receive data in XML format. Each application can have its own "language", which is translated into a universal language, the XML format.</td>
+		<td class='md-typeset justificar' width="70%" > Web Services são componentes que permitem que os aplicativos enviem e recebam dados no formato XML. Cada aplicativo pode ter sua própria "linguagem", que é traduzida em uma linguagem universal, o formato XML.</td>
 	</tr>
 </table>
 
 
-This document describes the implementation of WebService in CITSmart ESP. Called Citrest, the web service uses the RESTEasy implementation of the RESTFul standard.
-Through practical examples, the basic concepts, data structures, and patterns to be followed in the implementation of new services will be presented.
+Este documento descreve a implementação do WebService no CITSmart ESP. Chamado Citrest, o serviço da Web usa a implementação RESTEasy do padrão RESTFul. Através de exemplos práticos, os conceitos básicos, estruturas de dados e padrões a serem seguidos na implementação de novos serviços serão apresentados.
 
-##The Standard RestEasy
+##O padrão RestEasy  
 
-Representational State Transfer (REST) describes architectures that use the HTTP protocol or similar protocols, restricting the interface to a set of known HTTP operations: GET, POST, PUT, and DELETE.
+Representational State Transfer (REST) descreve as arquiteturas que usam o protocolo HTTP ou protocolos semelhantes, restringindo a interface a um conjunto de operações HTTP conhecidas: GET, POST, PUT e DELETE.
 
-Citrest uses RESTEasy, which is an implementation of the JAX-RS specification that provides a Java API for RESTful Web Services through the HTTP protocol.
+O Citrest usa o RESTEasy, que é uma implementação da especificação JAX-RS que fornece uma API Java para serviços da Web RESTful por meio do protocolo HTTP.
 
-This document is not intended to present details about the RESTful or RESTEasy implementation, since there is extensive documentation on the internet about the subject, such as in the site [http://www.jboss.org/resteasy](https://www.jboss.org/resteasy).
+Este documento não tem a intenção de apresentar detalhes sobre a implementação RESTful ou RESTEasy, já que existe extensa documentação na Internet sobre o assunto, como no site http://www.jboss.org/resteasy.
 
 ##Data Model
 
