@@ -1,25 +1,24 @@
 ﻿Title: Webservices - NEURO
-Description: NEURO Webservices
+Description: Webservices Neuro
 
-#Webservices NEURO
+#Webservices Neuro
 
-This document gathers the minimum knowledge necessary for the adequate use of
-the services via Rest.
+Este documento reúne os conhecimentos mínimos necessários para o adequado uso dos serviços via Rest.
 
 | **URL**                                      | **Description**                           | **Parameters**                                | **Return**                                        |
 |----------------------------------------------|-------------------------------------------|-----------------------------------------------|---------------------------------------------------|
-| **/startWithMap/{name}**                     | Starts an ESI flow by name                | name: Name of the registered flow             | Representation of the registered flow object      |
-| **/instance/initialize/{processInstanceId}** | Retrieve the values of a process instance | processInstanceid: ID of the process instance | Representation of the registered process instance |
-| **/instance/suspend/{processInstanceId}**    | Suspends a process instance               | processInstanceid: ID of the process instance | Representation of the registered process instance |
-| **/instance/restart/{processInstanceId}**    | Restarts a process instance               | processInstanceid: ID of the process instance | Representation of the registered process instance |
-| **/instance/reopen/{processInstanceId}**     | Reopens a process instance                | processInstanceid: ID of the process instance | Representation of the registered process instance |
-| **/userTask/{userTaskId}**                   | Retrieves an user task                    | userTaskId: ID of the created user task       | Representation of the registered process instance |
-| **/rule/executeWithMap/{name}**              | Executes a business rule                  | name: Name of the registered business rule    | Representation of the executed business rule      |
+| **/startWithMap/{name}**                     | Inicia um fluxo ESI a partir do nome                | name: Nome do fluxo cadastrado             | Objeto representativo do fluxo cadastrado      |
+| **/instance/initialize/{processInstanceId}** | Recupera os valores de uma instância de processo | processInstanceid: ID da instância de processo | Objeto representativo da instância de processo cadastrada |
+| **/instance/suspend/{processInstanceId}**    | Suspende uma instância de processo               | processInstanceid: ID da instância de processo | Objeto representativo da instância de processo cadastrada |
+| **/instance/restart/{processInstanceId}**    | Reinicia uma instância de processo               | processInstanceid: ID da instância de processo | Objeto representativo da instância de processo cadastrada |
+| **/instance/reopen/{processInstanceId}**     | Reabre uma instância de processo                | processInstanceid: ID da instância de processo | Objeto representativo da instância de processo cadastrada |
+| **/userTask/{userTaskId}**                   | Recupera uma tarefa de usuário                    | userTaskId: ID da tarefa de usuário criada       | Objeto representativo da instância de processo cadastrada |
+| **/rule/executeWithMap/{name}**              | Executa uma regra de negócio                  | name: Nome da regra de negócio cadastrada    | Objeto representativo da regra de negócio executada      |
 
--   request body: JSON Object with the variables for the flow
--   request body:JSON Object with the variables for the business rule
+-   request body: JSON Objeto com variáveis para o fluxo
+-   request body: JSON Objeto com variáveis para regras de negócio
 
-**Table 1 - Specification of APPLICATION PROGRAMMABLE INTERFACES** **(API)**
+**Tabela 1 - Especificação das APPLICATION PROGRAMMABLE INTERFACES (APIs)
 
 SPECIFIC GUIDELINES FOR REST API ACCESS
 ---------------------------------------
