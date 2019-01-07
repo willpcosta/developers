@@ -76,17 +76,17 @@ Cada um desses métodos pode fazer chamadas para o CITSmart Services Layer para 
 
 Todas as classes responsáveis pela operação do serviço da web devem ser registradas na tabela Rest_Operation.
 
-Each operation has an associated class that obeys a standard RestOperation interface and is responsible for its execution.
+Cada operação possui uma classe associada que obedece a uma interface padrão RestOperation e é responsável por sua execução.
 
-The class executing the operation can be of type Java or JavaScript (ClassType attribute). Currently only the Java type is supported.
+A classe que executa a operação pode ser do tipo Java ou JavaScript (atributo ClassType). Atualmente, apenas o tipo Java é suportado.
 
-An operation can be synchronous or asynchronous (OperationType attribute). A synchronous operation is performed immediately when it is called. An asynchronous operation points to batch processing. *Currently, only synchronous operations are supported.*
+Uma operação pode ser síncrona ou assíncrona (atributo OperationType). Uma operação síncrona é executada imediatamente quando é chamada. Uma operação assíncrona aponta para o processamento em lote.**Atualmente, somente operações síncronas são suportadas.**
 
-For a given user to be able to perform an operation, at least one user group must be associated with the operation in the Rest_Permission table.
+Para que um determinado usuário possa executar uma operação, pelo menos um grupo de usuários deve estar associado à operação na tabela Rest_Permission.
 
-The Rest_Parameter table stores parameters that can be used to perform operations. Examples of parameters are:
+A tabela Rest_Parameter armazena os parâmetros que podem ser usados para executar operações. Exemplos de parâmetros são:
 
-| **idrestparameter** | **Identifier**   | **Description**             |
+| **idrestparameter** | **Identificador**   | **Descrição**             |
 |---------------------|------------------|-----------------------------|
 | **1**               | CONTRACT_ID      | Contract ID                 |
 | **2**               | ORIGIN_ID        | Source ID                   |
@@ -94,9 +94,9 @@ The Rest_Parameter table stores parameters that can be used to perform operation
 | **4**               | INCIDENT_ID      | Incident demand type ID     |
 | **5**               | DEFAULT_DEPTO_ID | Unit Default ID             |
 
-Each operation can have one or more parameter domains in the Rest_Domain table.
+Cada operação pode ter um ou mais domínios de parâmetros na tabela Rest_Domain.
 
-| **idrestparameter** | **idrestoperation** | **value** |
+| **idrestparameter** | **idrestoperation** | **valor** |
 |---------------------|---------------------|-----------|
 | **1**               | 1                   | 1         |
 | **1**               | 6                   | 1         |
