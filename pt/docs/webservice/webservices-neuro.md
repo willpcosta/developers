@@ -18,7 +18,7 @@ Este documento reúne os conhecimentos mínimos necessários para o adequado uso
 -   request body: JSON Objeto com variáveis para o fluxo
 -   request body: JSON Objeto com variáveis para regras de negócio
 
-**Tabela 1 - Especificação das APPLICATION PROGRAMMABLE INTERFACES (APIs)  
+ **Tabela 1 - Especificação das APPLICATION PROGRAMMABLE INTERFACES (APIs)  
 
 SPECIFIC GUIDELINES FOR REST API ACCESS
 ---------------------------------------
