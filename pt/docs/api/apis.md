@@ -15,7 +15,7 @@ Esta seção destina-se a descrever a estrutura de comunicação REST, estabelec
 ### Login 
 
 !!! example "Login do usuário para usar os Serviços CITSmart"
-	```tab="Method"
+	```tab="Método"
  	POST
 	```
 
@@ -23,7 +23,7 @@ Esta seção destina-se a descrever a estrutura de comunicação REST, estabelec
  	<CITSMART_URL>/services/v2/login
 	```
 
-	```JSON tab="Request"
+	```JSON tab="Solicitação"
 	Solicitação { 
 	"userName": "mobile", 
 	"password": "123456", 
@@ -60,7 +60,7 @@ Esta seção destina-se a descrever a estrutura de comunicação REST, estabelec
 ### ListContracts
 
 !!! example "Lista dos contratos acessíveis ao atendente."
-	```tab="Method"
+	```tab="Método"
  	POST
 	```
 
@@ -68,7 +68,7 @@ Esta seção destina-se a descrever a estrutura de comunicação REST, estabelec
  	<CITSMART_URL>/services/v2/contracts
 	```
 
-	```JSON tab="Request"
+	```JSON tab="Solicitação"
 	{
 	"sessionID": "2355A68BF75281B73607EEC1A7191645"
 	}
@@ -103,7 +103,7 @@ Esta seção destina-se a descrever a estrutura de comunicação REST, estabelec
 ### ListDeniedReasons
 
 !!! example "Lista de razões quando recusar uma solicitação, como no check-in"
-	```tab="Method"
+	```tab="Método"
  	POST
 	```
 
@@ -111,7 +111,7 @@ Esta seção destina-se a descrever a estrutura de comunicação REST, estabelec
  	<CITSMART_URL>/services/v2/deniedReasons
 	```
 
-	```JSON tab="Request"
+	```JSON tab="Solicitação"
 	{
 	"sessionID": "2355A68BF75281B73607EEC1A7191645"
 	}
@@ -150,7 +150,7 @@ Esta seção destina-se a descrever a estrutura de comunicação REST, estabelec
 ### ListSolicitationStatus
 
 !!! example "Lista os status de uma solicitação a ser usada, por exemplo, no serviço de checkout."
-	```tab="Method"
+	```tab="Método"
  	POST
 	```
 
@@ -158,7 +158,7 @@ Esta seção destina-se a descrever a estrutura de comunicação REST, estabelec
  	<CITSMART_URL>/services/v2/status
 	```
 
-	```JSON tab="Request"
+	```JSON tab="Solicitação"
 	{
 	"sessionID": "2355A68BF75281B73607EEC1A7191645"
 	}
@@ -228,7 +228,7 @@ Esta seção destina-se a descrever a estrutura de comunicação REST, estabelec
 ### ListUnits
 
 !!! example " Lista as unidades de um contrato"
-	```tab="Method"
+	```tab="Método"
  	POST
 	```
 
@@ -236,7 +236,7 @@ Esta seção destina-se a descrever a estrutura de comunicação REST, estabelec
  	<CITSMART_URL>/services/v2/units
 	```
 
-	```JSON tab="Request"
+	```JSON tab="Solicitação"
 	{
 	"sessionID": "2355A68BF75281B73607EEC1A7191645"
 	"contractID": 1233
@@ -276,7 +276,7 @@ Esta seção destina-se a descrever a estrutura de comunicação REST, estabelec
 ### SendCoordinates
 
 !!! example "Atualiza as coordenadas geográficas de uma unidade."
-	```tab="Method"
+	```tab="Método"
  	POST
 	```
 
@@ -284,7 +284,7 @@ Esta seção destina-se a descrever a estrutura de comunicação REST, estabelec
  	<CITSMART_URL>/services/v2/coordinates
 	```
 
-	```JSON tab="Request"
+	```JSON tab="Solicitação"
 	{
 	"unitID": 222,
 	"sessionID": "2355A68BF75281B73607EEC1A7191645",
@@ -317,7 +317,7 @@ Esta seção destina-se a descrever a estrutura de comunicação REST, estabelec
 ### DeviceDisassociate
 
 !!! example "Desassociar um usuário de um dispositivo para que, quando um usuário excluir uma conexão, o usuário não receba mais a notificação push da conexão excluída."
-	```tab="Method"
+	```tab="Método"
  	POST
 	```
 
@@ -325,7 +325,7 @@ Esta seção destina-se a descrever a estrutura de comunicação REST, estabelec
  	<CITSMART_URL>/services/v2/disassociate
 	```
 
-	```JSON tab="Request"
+	```JSON tab="Solicitação"
 	{
 	"connection": "http://citsmart.centralit.com.br&quot;,
 	"sessionID": "2355A68BF75281B73607EEC1A7191645",
@@ -357,7 +357,7 @@ Esta seção destina-se a descrever a estrutura de comunicação REST, estabelec
 ### GetNewest
 
 !!! example "Recupera a solicitação mais recente para o usuário no grupo, a partir da última (newestNumber) no aplicativo"
-	```tab="Method"
+	```tab="Método"
  	POST
 	```
 
@@ -365,7 +365,7 @@ Esta seção destina-se a descrever a estrutura de comunicação REST, estabelec
  	<CITSMART_URL>/services/v2/getNewest
 	```
 
-	```JSON tab="Request"
+	```JSON tab="Solicitação"
 	{
 	"notificationType": 0,
 	"onlyApproval": 1,
@@ -456,7 +456,7 @@ Esta seção destina-se a descrever a estrutura de comunicação REST, estabelec
 ### GetOldest
 
 !!! example "Recupere a solicitação mais recente para o usuário no grupo, do mais antigo."
-	```tab="Method"
+	```tab="Método"
  	POST
 	```
 
@@ -464,7 +464,7 @@ Esta seção destina-se a descrever a estrutura de comunicação REST, estabelec
  	<CITSMART_URL>/services/v2/getOldest
 	```
 
-	```JSON tab="Request"
+	```JSON tab="Solicitação"
 	{
 	"notificationType": 0,
 	"onlyApproval": 1,
@@ -555,7 +555,7 @@ Esta seção destina-se a descrever a estrutura de comunicação REST, estabelec
 ### GetByCoordinates
 
 !!! example "Recupera a solicitação mais recente para o usuário no grupo, a partir das coordenadas atuais do usuário."
-	```tab="Method"
+	```tab="Método"
  	POST
 	```
 
@@ -563,7 +563,7 @@ Esta seção destina-se a descrever a estrutura de comunicação REST, estabelec
  	<CITSMART_URL>/services/v2/getByCoordinates
 	```
 
-	```JSON tab="Request"
+	```JSON tab="Solicitação"
 	{
 	"notificationType": 0,
 	"onlyApproval": 1,
@@ -614,7 +614,7 @@ Esta seção destina-se a descrever a estrutura de comunicação REST, estabelec
 	```
 
 	```tab="Fields"
-	Request :
+	Solicitação:
 		notificationType: numérico não nulo;
 		onlyApproval: numérico não nulo;
 		latitude: numérico não nulo;
@@ -673,7 +673,7 @@ Esta seção destina-se a descrever a estrutura de comunicação REST, estabelec
 ### UpdateNotification
 
 !!! example "Recupera as tarefas de um serviço."
-	```tab="Method"
+	```tab="Método"
  	POST
 	```
 
@@ -681,7 +681,7 @@ Esta seção destina-se a descrever a estrutura de comunicação REST, estabelec
  	<CITSMART_URL>/services/v2/update
 	```
 
-	```JSON tab="Request"
+	```JSON tab="Solicitação"
 	{
 	number": 322,
 	"sessionID": "2355A68BF75281B73607EEC1A7191645"
@@ -770,7 +770,7 @@ Esta seção destina-se a descrever a estrutura de comunicação REST, estabelec
 ### GetById
 
 !!! example "Recupera detalhes de uma solicitação, de acordo com seu identificador"
-	```tab="Method"
+	```tab="Método"
  	POST
 	```
 
@@ -778,7 +778,7 @@ Esta seção destina-se a descrever a estrutura de comunicação REST, estabelec
  	<CITSMART_URL>/services/v2/getById
 	```
 
-	```JSON tab="Request"
+	```JSON tab="Solicitação"
 	{
 	"taskId": 22737,
 	"sessionID": "2355A68BF75281B73607EEC1A7191645"
@@ -823,7 +823,7 @@ Esta seção destina-se a descrever a estrutura de comunicação REST, estabelec
 ### GetReasons
 
 !!! example "Recuperar os motivos a serem utilizados na aprovação de uma solicitação, de acordo com a solicitação."
-	```tab="Method"
+	```tab="Método"
  	POST
 	```
 
@@ -831,7 +831,7 @@ Esta seção destina-se a descrever a estrutura de comunicação REST, estabelec
  	<CITSMART_URL>/services/v2/getReasons
 	```
 
-	```JSON tab="Request"
+	```JSON tab="Solicitação"
 	{
 	"taskId": 22737,
 	"sessionID": "2355A68BF75281B73607EEC1A7191645"
@@ -882,7 +882,7 @@ Esta seção destina-se a descrever a estrutura de comunicação REST, estabelec
 ### AttendRequest
 
 !!! example "Informar o início do atendimento de uma solicitação de serviço."
-	```tab="Method"
+	```tab="Método"
  	POST
 	```
 
@@ -890,7 +890,7 @@ Esta seção destina-se a descrever a estrutura de comunicação REST, estabelec
  	<CITSMART_URL>/services/v2/attendRequest
 	```
 
-	```JSON tab="Request"
+	```JSON tab="Solicitação"
 	{
 	"number": 89647,
 	"latitude": -19.369852147,
@@ -926,7 +926,7 @@ Esta seção destina-se a descrever a estrutura de comunicação REST, estabelec
 ### AttendantLocation
 
 !!! example "Informa a localização automática da posição do atendente."
-	```tab="Method"
+	```tab="Método"
  	POST
 	```
 
@@ -934,7 +934,7 @@ Esta seção destina-se a descrever a estrutura de comunicação REST, estabelec
  	<CITSMART_URL>/services/v2/ location 
 	```
 
-	```JSON tab="Request"
+	```JSON tab="Solicitação"
 	{
 	"sessionID": "2355A68BF75281B73607EEC1A7191645",
 	"latitude": -19.369852147,
@@ -959,7 +959,7 @@ Esta seção destina-se a descrever a estrutura de comunicação REST, estabelec
 ### Feedback 
 
 !!! example "Registra uma aprovação ou negação de uma solicitação de serviço."
-	```tab="Method"
+	```tab="Método"
  	POST
 	```
 
@@ -967,7 +967,7 @@ Esta seção destina-se a descrever a estrutura de comunicação REST, estabelec
  	<CITSMART_URL>/services/v2/feedback
 	```
 
-	```JSON tab="Request"
+	```JSON tab="Solicitação"
 	{
 	"taskId": 22736,
 	"feedback": 0,
@@ -1001,7 +1001,7 @@ Esta seção destina-se a descrever a estrutura de comunicação REST, estabelec
 ### New
 
 !!! example "Cria uma nova solicitação"
-	```tab="Method"
+	```tab="Método"
  	POST
 	```
 
@@ -1009,7 +1009,7 @@ Esta seção destina-se a descrever a estrutura de comunicação REST, estabelec
  	<CITSMART_URL>/services/v2/new
 	```
 
-	```JSON tab="Request"
+	```JSON tab="Solicitação"
 	{
 	"description": "Teste mobile",
 	"sessionID": "2355A68BF75281B73607EEC1A7191645",
@@ -1042,7 +1042,7 @@ Esta seção destina-se a descrever a estrutura de comunicação REST, estabelec
 ### Check-In
 
 !!! example "Check-in do atendente em uma solicitação. Em outras palavras, inicia o cumprimento da solicitação."
-	```tab="Method"
+	```tab="Método"
  	POST
 	```
 
@@ -1050,7 +1050,7 @@ Esta seção destina-se a descrever a estrutura de comunicação REST, estabelec
  	<CITSMART_URL>/services/v2/checkin 
 	```
 
-	```JSON tab="Request"
+	```JSON tab="Solicitação"
 	{
 	"taskId": 22778,
 	"sessionID": "2355A68BF75281B73607EEC1A7191645",
@@ -1085,7 +1085,7 @@ Esta seção destina-se a descrever a estrutura de comunicação REST, estabelec
 ### Check-Out
 
 !!! example "Verifica um atendente em uma solicitação, atualizando seu status ("Suspenso", "Resolvido", etc.)."
-	```tab="Method"
+	```tab="Método"
  	POST
 	```
 
@@ -1093,7 +1093,7 @@ Esta seção destina-se a descrever a estrutura de comunicação REST, estabelec
  	<CITSMART_URL>/services/v2/checkout
 	```
 
-	```JSON tab="Request"
+	```JSON tab="Solicitação"
 	{
 	"taskId": 22778,
 	"sessionID": "2355A68BF75281B73607EEC1A7191645",
@@ -1133,7 +1133,7 @@ Esta seção destina-se a descrever a estrutura de comunicação REST, estabelec
 ### Check-InDenied
 
 !!! example "Registrar a negação de uma solicitação de atendimento pelo atendente, nos casos de recusa ao check-in."
-	```tab="Method"
+	```tab="Método"
  	POST
 	```
 
@@ -1141,7 +1141,7 @@ Esta seção destina-se a descrever a estrutura de comunicação REST, estabelec
  	<CITSMART_URL>/services/v2/denied
 	```
 
-	```JSON tab="Request"
+	```JSON tab="Solicitação"
 	{
 	"taskId": 22778,
 	"sessionID": "2355A68BF75281B73607EEC1A7191645",
