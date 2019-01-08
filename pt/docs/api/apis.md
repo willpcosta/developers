@@ -33,7 +33,7 @@ Esta seção destina-se a descrever a estrutura de comunicação REST, estabelec
 	
 	```
 
-	```JSON tab="Response"
+	```JSON tab="Resposta"
 	Response {
 	"sessionID": "2355A68BF75281B73607EEC1A7191645",
 	"rangeAction": 10,
@@ -41,7 +41,7 @@ Esta seção destina-se a descrever a estrutura de comunicação REST, estabelec
 	}
 	```
 
-	```tab="Fields"
+	```tab="Campos"
 	Solicitação:
 		userName: alfanumérico não vazio e nem nulo;
 		password: alfanumérico não vazio e nem nulo;
@@ -74,7 +74,7 @@ Esta seção destina-se a descrever a estrutura de comunicação REST, estabelec
 	}
 	```
 
-	```JSON tab="Response"
+	```JSON tab="Resposta"
 	{
 	"dateTime": 1412101947000,
 	"operationID": 65,
@@ -88,7 +88,7 @@ Esta seção destina-se a descrever a estrutura de comunicação REST, estabelec
 	}
 	```
 
-	```tab="Fields"
+	```tab="Campos"
 	Solicitação :
 		sessionID: alfanumérico não nulo e nem vazio;
 	Resposta :
@@ -117,7 +117,7 @@ Esta seção destina-se a descrever a estrutura de comunicação REST, estabelec
 	}
 	```
 
-	```JSON tab="Response"
+	```JSON tab="Resposta"
 	{
 	"dateTime": 1412101988000,
 	"operationID": 666,
@@ -135,7 +135,7 @@ Esta seção destina-se a descrever a estrutura de comunicação REST, estabelec
 	}
 	```
 
-	```tab="Fields"
+	```tab="Campos"
 	Solicitação :
 		sessionID: alfanumérico não nulo e nem vazio;
 	Resposta :
@@ -165,7 +165,7 @@ Esta seção destina-se a descrever a estrutura de comunicação REST, estabelec
 	```
 
 
-	```JSON tab="Response"
+	```JSON tab="Resposta"
 	{
 	"dateTime": 1412101662000,
 	"operationID": 64,
@@ -213,7 +213,7 @@ Esta seção destina-se a descrever a estrutura de comunicação REST, estabelec
 	}
 	```
 
-	```tab="Fields"
+	```tab="Campos"
 	Solicitação :
 		sessionID: alfanumérico não vazio nem nulo;
 	Resposta :
@@ -243,7 +243,7 @@ Esta seção destina-se a descrever a estrutura de comunicação REST, estabelec
 	}
 	```
 
-	```JSON tab="Response"
+	```JSON tab="Resposta"
 	{
 	"dateTime": 1412101988000,
 	"operationID": 66,
@@ -261,7 +261,7 @@ Esta seção destina-se a descrever a estrutura de comunicação REST, estabelec
 	}
 	```
 
-	```tab="Fields"
+	```tab="Campos"
 	Solicitação:
 		sessionID: alfanumérico não vazio nem nulo; 
 		contractID: numérico não nulo.
@@ -293,7 +293,7 @@ Esta seção destina-se a descrever a estrutura de comunicação REST, estabelec
 	}
 	```
 
-	```JSON tab="Response"
+	```JSON tab="Resposta"
 	{
 	"dateTime": 1412102841000,
 	"operationID": 68,
@@ -302,13 +302,13 @@ Esta seção destina-se a descrever a estrutura de comunicação REST, estabelec
 	}
 	```
 
-	```tab="Fields"
+	```tab="Campos"
 	Solicitação:
 		unitID: numérico não nulo;
 		sessionID: alfanumérico não vazio nem nulo;
 		latitude: numérico não nulo;
 		longitude: numérico não nulo;
-	Response :
+	Resposta:
 		dateTime: timestamp não vazio nem nulo;
 		operationID: numérico não vazio nem nulo;
 		error: valor alfanumérico que pode ser nulo mas não pode ser vazio;
@@ -333,7 +333,7 @@ Esta seção destina-se a descrever a estrutura de comunicação REST, estabelec
 	}
 	```
 
-	```JSON tab="Response"
+	```JSON tab="Resposta"
 	{
 	"dateTime": 1412102841000,
 	"operationID": 68,
@@ -342,12 +342,12 @@ Esta seção destina-se a descrever a estrutura de comunicação REST, estabelec
 	}
 	```
 
-	```tab="Fields"
+	```tab="Campos"
 	Solicitação:
 		connection: alfanumérico não vazio nem nulo, referindo-se à conexão excluída pelo usuário;
 		sessionID: alfanumérico não vazio nem nulo;
 		token: alfanumérico não vazio nem nulo, referindo-se ao token a ser desassociado;
-	Response :
+	Resposta:
 		dateTime: timestamp não vazio nem nulo;
 		operationID: numérico não vazio nem nulo;
 		error: valor alfanumérico que pode ser nulo mas não vazio;
@@ -374,7 +374,7 @@ Esta seção destina-se a descrever a estrutura de comunicação REST, estabelec
 	}
 	```
 
-	```JSON tab="Response"
+	```JSON tab="Resposta"
 	{
 	"dateTime": 1377618318000,
 	"operationID": 336,
@@ -405,13 +405,13 @@ Esta seção destina-se a descrever a estrutura de comunicação REST, estabelec
 	}
 	```
 
-	```tab="Fields"
+	```tab="Campos"
 	Solicitação:
 		notificationType: numérico não nulo;
 		onlyApproval: numérico não nulo;
 		sessionID: alfanumérico não vazio nem nulo;
 		newestNumber: numérico não nulo;
-	Response :
+	Resposta:
 		dateTime: timestamp não vazio nem nulo;
 		operationID: numérico não vazio nem nulo;
 		error: valor alfanumérico que pode ser nulo mas não pode ser vazio;
@@ -473,7 +473,7 @@ Esta seção destina-se a descrever a estrutura de comunicação REST, estabelec
 	}
 	```
 
-	```JSON tab="Response"
+	```JSON tab="Resposta"
 	{
 	"dateTime": 1377618318000,
 	"operationID": 336,
@@ -504,7 +504,7 @@ Esta seção destina-se a descrever a estrutura de comunicação REST, estabelec
 	}
 	```
 
-	```tab="Fields"
+	```tab="Campos"
 	Solicitação:
 		notificationType: numérico não nulo;
 		onlyApproval: numérico não nulo;
@@ -576,7 +576,7 @@ Esta seção destina-se a descrever a estrutura de comunicação REST, estabelec
 	}
 	```
 
-	```JSON tab="Response"
+	```JSON tab="Resposta"
 	{
 	"dateTime": 1377618318000,
 	"operationID": 336,
@@ -613,7 +613,7 @@ Esta seção destina-se a descrever a estrutura de comunicação REST, estabelec
 	}
 	```
 
-	```tab="Fields"
+	```tab="Campos"
 	Solicitação:
 		notificationType: numérico não nulo;
 		onlyApproval: numérico não nulo;
@@ -688,7 +688,7 @@ Esta seção destina-se a descrever a estrutura de comunicação REST, estabelec
 	}
 	```
 
-	```JSON tab="Response"
+	```JSON tab="Resposta"
 	{
 	"dateTime": 1377618318000,
 	"operationID": 336,
@@ -719,7 +719,7 @@ Esta seção destina-se a descrever a estrutura de comunicação REST, estabelec
 	}
 	```
 
-	```tab="Fields"
+	```tab="Campos"
 	Solicitação:
 		notificationType: numérico não nulo;
 		onlyApproval: numérico não nulo;
@@ -785,7 +785,7 @@ Esta seção destina-se a descrever a estrutura de comunicação REST, estabelec
 	}
 	```
 
-	```JSON tab="Response"
+	```JSON tab="Resposta"
 	{
 	"dateTime": 1377618392000,
 	"operationID": 337,
@@ -802,7 +802,7 @@ Esta seção destina-se a descrever a estrutura de comunicação REST, estabelec
 	}	
 	```
 
-	```tab="Fields"
+	```tab="Campos"
 	Solicitação:
 		taskId: numérico não nulo;
 		sessionID: alfanumérico não vazio nem nulo;
@@ -838,7 +838,7 @@ Esta seção destina-se a descrever a estrutura de comunicação REST, estabelec
 	}
 	```
 
-	```JSON tab="Response"
+	```JSON tab="Resposta"
 	{
 	"dateTime": 1377618482000,
 	"operationID": 339,
@@ -865,7 +865,7 @@ Esta seção destina-se a descrever a estrutura de comunicação REST, estabelec
 	}
 	```
 
-	```tab="Fields"
+	```tab="Campos"
 	Solicitação:
 		taskId: numérico não nulo;
 		sessionID: alfanumérico não vazio nem nulo;
@@ -900,7 +900,7 @@ Esta seção destina-se a descrever a estrutura de comunicação REST, estabelec
 	}
 	```
 
-	```JSON tab="Response"
+	```JSON tab="Resposta"
 	{
 	"dateTime": 1377618517000,
 	"operationID": 341,
@@ -909,7 +909,7 @@ Esta seção destina-se a descrever a estrutura de comunicação REST, estabelec
 	}
 	```
 
-	```tab="Fields"
+	```tab="Campos"
 	Solicitação:
 		number: numérico não nulo;
 		latitude: numérico não nulo;
@@ -943,7 +943,7 @@ Esta seção destina-se a descrever a estrutura de comunicação REST, estabelec
 	}
 	```
 
-	```JSON tab="Response"
+	```JSON tab="Resposta"
 	{
 	"dateTime": 1412102841000,
 	"operationID": 68,
@@ -952,7 +952,7 @@ Esta seção destina-se a descrever a estrutura de comunicação REST, estabelec
 	}
 	```
 
-	```tab="Fields"
+	```tab="Campos"
 	N/A
 	```
 
@@ -976,7 +976,7 @@ Esta seção destina-se a descrever a estrutura de comunicação REST, estabelec
 	"sessionID": "2355A68BF75281B73607EEC1A7191645}
 	```
 
-	```JSON tab="Response"
+	```JSON tab="Resposta"
 	{
 	"dateTime": 1377618517000,
 	"operationID": 341,
@@ -984,7 +984,7 @@ Esta seção destina-se a descrever a estrutura de comunicação REST, estabelec
 	}
 	```
 
-	```tab="Fields"
+	```tab="Campos"
 	Solicitação:
 		taskId: numérico não nulo;
 		feedback: numérico não nulo;
@@ -1017,7 +1017,7 @@ Esta seção destina-se a descrever a estrutura de comunicação REST, estabelec
 	"longitude": -49.369852147}
 	```
 
-	```JSON tab="Response"
+	```JSON tab="Resposta"
 	{
 	"dateTime": 1377618543000,
 	"operationID": 342,
@@ -1026,7 +1026,7 @@ Esta seção destina-se a descrever a estrutura de comunicação REST, estabelec
 	}
 	```
 
-	```tab="Fields"
+	```tab="Campos"
 	Solicitação:
 		description: alfanumérico não vazio nem nulo;
 		sessionID: alfanumérico não vazio nem nulo;
@@ -1059,7 +1059,7 @@ Esta seção destina-se a descrever a estrutura de comunicação REST, estabelec
 	"startTime": 1377618543000}
 	```
 
-	```JSON tab="Response"
+	```JSON tab="Resposta"
 	{
 	"dateTime": 1377618543000,
 	"operationID": 342,
@@ -1068,7 +1068,7 @@ Esta seção destina-se a descrever a estrutura de comunicação REST, estabelec
 	}
 	```
 
-	```tab="Fields"
+	```tab="Campos"
 	Solicitação:
 		taskId:numérico não nulo;
 		sessionID: alfanumérico não vazio nem nulo;
@@ -1105,7 +1105,7 @@ Esta seção destina-se a descrever a estrutura de comunicação REST, estabelec
 	}
 	```
 
-	```JSON tab="Response"
+	```JSON tab="Resposta"
 	{
 	"dateTime": 1377618517000,
 	"operationID": 342,
@@ -1114,7 +1114,7 @@ Esta seção destina-se a descrever a estrutura de comunicação REST, estabelec
 	}
 	```
 
-	```tab="Fields"
+	```tab="Campos"
 	Solicitação:
 		taskId: numérico não nulo;
 		sessionID: alfanumérico não vazio nem nulo;
@@ -1152,7 +1152,7 @@ Esta seção destina-se a descrever a estrutura de comunicação REST, estabelec
 	}
 	```
 
-	```JSON tab="Response"
+	```JSON tab="Resposta"
 	{
 	"dateTime": 1377618543000,
 	"operationID": 342,
@@ -1160,7 +1160,7 @@ Esta seção destina-se a descrever a estrutura de comunicação REST, estabelec
 	}
 	```
 
-	```tab="Fields"
+	```tab="Campos"
 	Solicitação:
 		taskId: numérico não nulo;
 		sessionID: alfanumérico não vazio nem nulo;
