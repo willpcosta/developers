@@ -5,9 +5,7 @@ Description: descrever a estrutura de comunicação REST, estabelecida entre apl
 
 
 OKOKOK
-OKOKOK
-OKOKOK
-OKOKOK
+
 
 Esta seção destina-se a descrever a estrutura de comunicação REST, estabelecida entre aplicativos e o servidor de back-end.
 
