@@ -2,6 +2,9 @@
 Description: descrever a estrutura de comunicação REST, estabelecida entre aplicativos e o servidor de back-end.
 
 OKOKOK
+OKOKOK
+OKOKOK
+OKOKOK
 
 #API´s ESP -Enterprise Service Platform
 
