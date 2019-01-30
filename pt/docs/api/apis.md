@@ -3,6 +3,8 @@ Description: descrever a estrutura de comunicação REST, estabelecida entre apl
 
 #API´s ESP -Enterprise Service Platform
 
+OKOKOKOKOKOKOKOK
+
 Esta seção destina-se a descrever a estrutura de comunicação REST, estabelecida entre aplicativos e o servidor de back-end.
 
 !!! warning "Atenção"
