@@ -7,12 +7,12 @@ Esta funcionalidade tem por objetivo alterar o SLA através de script Rhino.
 Procedimento
 ------------
 
-1-  Acessar a funcionalidade através da navegação no menu principal Sistema \>
+1. Acessar a funcionalidade através da navegação no menu principal Sistema \>
     Processamento Batch;
 
-2-  Clicar no botão "Novo";
+2. Clicar no botão "Novo";
 
-3-  Preencher os campos disponibilizados, sendo:
+3. Preencher os campos disponibilizados, sendo:
 
    - tipo: RhinoScript;
     
@@ -25,7 +25,7 @@ Procedimento
 
    - conteúdo: ver script na próxima seção.
 
-4-  Clicar em "Gravar".
+4. Clicar em "Gravar".
 
 Script Rhino
 ------------
