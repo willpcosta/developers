@@ -21,7 +21,7 @@ Procedimento
 
     Expressão cron: define o horário de execução da rotina e o conteúdo da
     rotina, onde será descrito o contexto da rotina a ser executada na
-    ferramenta;
+    ferramenta.
 
    - conteúdo: ver script na próxima seção.
 
